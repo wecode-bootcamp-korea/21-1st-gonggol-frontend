@@ -1,0 +1,7 @@
+audited 2084 packages in 8.295s
+
+139 packages are looking for funding
+  run `npm fund` for details
+
+found 80 moderate severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details

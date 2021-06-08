@@ -1,0 +1,105 @@
+@import '../../Styles/common.scss';
+
+body {
+  font-family: 'system-ui';
+
+  .headerTop {
+    background-color: #094d8b;
+
+    .topWrapper {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1500px;
+      margin: 0 auto;
+
+      .headerLogo {
+        display: inline-block;
+        width: 150px;
+        height: 55px;
+        background-color: white;
+        text-decoration: none;
+
+        .logoName {
+          display: flex;
+          justify-content: center;
+          padding-top: 15px;
+          color: $blue-font-color;
+          font-size: 25px;
+          text-decoration: none;
+          font-family: 'Staatliches', cursive;
+        }
+      }
+    }
+  }
+
+  .headerMenu {
+    .listContainer {
+      padding: 20px 0;
+      a {
+        padding: 30px 0;
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    li {
+      float: left;
+      margin-left: 20px;
+
+      .dropDown {
+        display: relative;
+        float: left;
+        overflow: hidden;
+
+        &:hover {
+          .dropContent {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        .dropButton {
+          border: none;
+          outline: none;
+          color: white;
+          padding: 20px 12px;
+          background-color: inherit;
+          font-size: 14px;
+          animation: growDown 300ms ease-in-out forwards;
+
+          &:hover {
+            background-color: #133657;
+            cursor: pointer;
+          }
+
+          i {
+            margin-left: 5px;
+          }
+        }
+
+        .dropContent {
+          position: absolute;
+          opacity: 0;
+          visibility: hidden;
+          background-color: white;
+          min-width: 100px;
+          z-index: 1;
+
+          a {
+            text-decoration: none;
+            color: black;
+            padding: 12px 18px;
+            display: block;
+            text-align: left;
+            border-left: 1px solid #094d8b;
+            border-right: 1px solid #094d8b;
+          }
+
+          .lastContent {
+            border-bottom: 1px solid #094d8b;
+          }
+        }
+      }
+    }
+  }
+}

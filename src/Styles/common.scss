@@ -4,5 +4,40 @@
   padding: 0;
 }
 
+@mixin flexSet($justify: center, $align: center, $flexDirection: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $flexDirection;
+}
+
 $blue-font-color: #094d8b;
 $gray-font-color: #757575;
+
+.page-heading h2 {
+  position: relative;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page-heading h2:before {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  border-top: 1px solid #7e7e7e;
+}
+
+.page-heading h2 span {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 1.45;
+  background-color: #fff;
+  color: #424242;
+}
