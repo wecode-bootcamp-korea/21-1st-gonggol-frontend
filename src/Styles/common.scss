@@ -1,18 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css');
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
-@mixin flexSet($justify: center, $align: center, $flexDirection: row) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-  flex-direction: $flexDirection;
-}
-
-$blue-font-color: #094d8b;
-$gray-font-color: #757575;
 
 .page-heading h2 {
   position: relative;
