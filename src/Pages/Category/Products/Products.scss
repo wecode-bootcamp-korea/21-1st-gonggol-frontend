@@ -1,0 +1,10 @@
+@import '../../../Styles/_variables.scss';
+
+.Products {
+  display: grid;
+  max-width: $max-width;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 10px;
+  column-gap: 20px;
+  justify-items: stretch;
+}

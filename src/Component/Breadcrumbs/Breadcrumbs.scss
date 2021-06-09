@@ -1,0 +1,19 @@
+.Breadcrumbs {
+  ul {
+    display: flex;
+    align-content: center;
+  }
+  li {
+    align-items: center;
+  }
+  li:after:not(:last-of-type) {
+    content: '>';
+  }
+
+  li a {
+    padding: 0 0 0 12px;
+    color: #757575;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}

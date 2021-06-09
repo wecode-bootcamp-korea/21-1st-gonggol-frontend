@@ -1,0 +1,51 @@
+@import '../../../Styles/_variables.scss';
+
+.SubCategory {
+  @include flexSet;
+  position: relative;
+  width: 100%;
+  max-width: $max-width;
+
+  .subcate-nav {
+    width: 55%;
+    margin: 0 auto 40px;
+    overflow: hidden;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0 2px 4px;
+
+      a {
+        display: block;
+        padding: 0 20px;
+        min-width: 120px;
+        height: 32px;
+        font-size: 14px;
+        line-height: 28px;
+        text-decoration: none;
+        text-align: center;
+        background: #fff;
+        border: 2px solid #fff;
+        text-transform: uppercase;
+        color: #000;
+
+        &:hover,
+        &.selected {
+          border-color: #cdcdcd;
+          color: #949494;
+        }
+      }
+    }
+  }
+
+  .product-filter {
+    position: absolute;
+    right: 10px;
+    top: 0;
+
+    select {
+      width: 120px;
+    }
+  }
+}

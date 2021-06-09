@@ -1,0 +1,10 @@
+@import '../../Styles/_variables.scss';
+
+.Category {
+  @include flexSet($flexDirection: column);
+  padding-top: 50px;
+
+  .more-content {
+    margin: 20px;
+  }
+}

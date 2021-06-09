@@ -1,0 +1,11 @@
+@mixin flexSet($justify: center, $align: center, $flexDirection: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $flexDirection;
+}
+
+$blue-font-color: #094d8b;
+$gray-font-color: #080404;
+
+$max-width: 1200px;
