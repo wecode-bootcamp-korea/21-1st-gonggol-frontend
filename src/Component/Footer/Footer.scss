@@ -1,0 +1,71 @@
+@import '../../Styles/_variables.scss';
+
+.footerContainer {
+  position: relative;
+  padding: 40px 0 50px;
+  color: $gray-font-color;
+  border-top: 4px solid #094d8b;
+  font-family: 'system-ui';
+
+  .footerWrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 1350px;
+
+    .footer-logo {
+      float: left;
+      margin: 18px 50px 0 0;
+      font-weight: bold;
+      font-size: 45px;
+    }
+  }
+
+  .brandInfo {
+    .infoTop {
+      margin-bottom: 15px;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+
+        strong {
+          font-weight: 700;
+        }
+      }
+
+      span {
+        margin: 0 12px;
+      }
+    }
+
+    .infoMiddle {
+      float: left;
+      margin-right: 40px;
+
+      span {
+        margin: 0 12px;
+      }
+
+      a {
+        margin-left: 5px;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .infoContainer {
+        margin: 5px 0;
+      }
+
+      .copyrightContainer {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .verifiedSeal {
+    img {
+      margin-left: 50px;
+      width: 90px;
+    }
+  }
+}
