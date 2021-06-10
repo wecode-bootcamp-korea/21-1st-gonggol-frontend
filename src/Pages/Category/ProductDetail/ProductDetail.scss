@@ -1,8 +1,15 @@
-.Product {
+.ProductDetail {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
   text-align: center;
 
   .product-thumbnail {
     position: relative;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
     img {
       max-width: 100%;
       &.hover_image {

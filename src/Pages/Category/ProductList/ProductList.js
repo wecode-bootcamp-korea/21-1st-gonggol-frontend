@@ -1,12 +1,12 @@
 import React from 'react';
-import Product from '../Product/Product';
-import './Products.scss';
+import Product from '../ProductDetail/ProductDetail';
+import './ProductList.scss';
 
-class Products extends React.Component {
+class ProductList extends React.Component {
   render() {
     const { products } = this.props;
     return (
-      <div class="Products">
+      <div class="ProductList">
         {products?.map(product => (
           <Product
             id={product.productId}
@@ -24,4 +24,4 @@ class Products extends React.Component {
   }
 }
 
-export default Products;
+export default ProductList;

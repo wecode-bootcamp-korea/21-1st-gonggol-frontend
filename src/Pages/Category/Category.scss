@@ -4,6 +4,18 @@
   @include flexSet($flexDirection: column);
   padding-top: 50px;
 
+  .button {
+    width: 120px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid #eee;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: #0a4d8b;
+    color: #fff;
+    transition: background-color 0.5s;
+  }
   .more-content {
     margin: 20px;
   }

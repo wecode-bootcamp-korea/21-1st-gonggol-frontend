@@ -1,6 +1,6 @@
 @import '../../../Styles/_variables.scss';
 
-.Products {
+.ProductList {
   display: grid;
   max-width: $max-width;
   grid-template-columns: repeat(4, 1fr);

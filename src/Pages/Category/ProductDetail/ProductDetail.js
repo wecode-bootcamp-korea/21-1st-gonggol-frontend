@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Product.scss';
+import './ProductDetail.scss';
 
-class Product extends React.Component {
+class ProductDetail extends React.Component {
   render() {
     const {
       id,
@@ -16,7 +16,7 @@ class Product extends React.Component {
     } = this.props;
 
     return (
-      <div className="Product">
+      <div className="ProductDetail">
         <div className="product-thumbnail">
           <Link to="/product">
             <img alt={`${name}의 이미지`} src={mainImg} />
@@ -52,4 +52,4 @@ class Product extends React.Component {
   }
 }
 
-export default Product;
+export default ProductDetail;

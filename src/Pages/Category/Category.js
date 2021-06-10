@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../../Component/Header/Header';
 import CategoryHeader from './CategoryHeader/CategoryHeader';
 import SubCategory from './SubCategory/SubCategory';
-import Products from './Products/Products';
+import ProductList from './ProductList/ProductList';
 import './Category.scss';
 
 class Category extends React.Component {
@@ -48,30 +48,32 @@ class Category extends React.Component {
 
   render() {
     return (
-      <div className="Category">
-        <CategoryHeader
-          id={this.state.info.id}
-          name={this.state.info.name}
-          bannerImage={this.state.info.banner_image}
-          categoryPath={this.state.info.category_path}
-          itemCount={this.state.products.length}
-        />
-        <SubCategory
-          subCategories={this.state.subCategories}
-          currentCategory={this.state.currentCategory}
-          sortBy={this.state.sortBy}
-          onChangeSubCategory={this.onChangeSubCategory}
-        />
-        <Products products={this.state.products} />
-        {this.state.isMoreProducts && (
-          <button
-            className="button more-content"
-            onClick={this.onSelectProductList}
-          >
-            더보기
-          </button>
-        )}
-      </div>
+      <>
+        <div className="Category">
+          <CategoryHeader
+            id={this.state.info.id}
+            name={this.state.info.name}
+            bannerImage={this.state.info.banner_image}
+            categoryPath={this.state.info.category_path}
+            itemCount={this.state.products.length}
+          />
+          <SubCategory
+            subCategories={this.state.subCategories}
+            currentCategory={this.state.currentCategory}
+            sortBy={this.state.sortBy}
+            onChangeSubCategory={this.onChangeSubCategory}
+          />
+          <ProductList products={this.state.products} />
+          {this.state.isMoreProducts && (
+            <button
+              className="button more-content"
+              onClick={this.onSelectProductList}
+            >
+              더보기
+            </button>
+          )}
+        </div>
+      </>
     );
   }
 }
