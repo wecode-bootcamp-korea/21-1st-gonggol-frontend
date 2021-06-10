@@ -1,13 +1,10 @@
 .Join {
-  width: 1200px;
-  padding: 75px 0 40px;
   margin: 100px;
+  padding: 75px 0 40px;
+  width: 1200px;
 
   .tittle {
     margin: 15px 0;
-  }
-
-  h1 {
     font-weight: bold;
   }
 
@@ -15,28 +12,21 @@
     display: grid;
     grid-template-columns: 2fr 13fr;
     align-items: stretch;
+    margin-bottom: 30px;
     border-top: 1px solid #d7d5d5;
     border-left: 1px solid #d7d5d5;
-    margin-bottom: 30px;
 
     input {
-      height: 23px;
+      margin-right: 3px;
       padding: 4px;
+      height: 23px;
       border: 1px solid #d9d9d9;
       color: #202020;
       font-size: 12px;
-      margin-right: 3px;
       font-weight: 400;
       text-align: left;
       vertical-align: middle;
     }
-
-    align-self: stretch;
-    /*.check-wrap {
-      display: flex;
-      align-content: center;
-      text-align: center;
-    }*/
 
     .item {
       padding: 1rem;
@@ -55,18 +45,18 @@
       }
 
       .required {
+        padding-top: 5px;
+        padding-left: 1px;
         font-size: 15px;
         color: red;
-        padding-left: 1px;
-        padding-top: 5px;
       }
 
       .add1 {
-        font-size: 12px;
         padding: 3px 10px;
+        border: 1px solid #bebebe;
         border-radius: 1px;
         background-color: white;
-        border: 1px solid #bebebe;
+        font-size: 12px;
       }
 
       .add2 {
@@ -78,15 +68,15 @@
       }
 
       .phone-select {
-        font-size: 12px;
         margin-right: 4px;
         height: 22px;
         width: 55px;
+        font-size: 12px;
       }
 
       .phone-input {
-        width: 55px;
         margin: 0 4px;
+        width: 55px;
       }
     }
   }
@@ -95,24 +85,23 @@
     text-align: center;
 
     .goMain1 {
-      text-decoration: none;
+      margin-right: 2px;
+      padding: 10px 36px;
+      background-color: #3a4050;
       border: 1px solid #3a4050;
       border-radius: 6px;
-      padding: 10px 36px;
-      margin-right: 2px;
-      background-color: #3a4050;
       color: #f1f1f1;
+      text-decoration: none;
     }
 
     .goMain2 {
-      text-decoration: none;
+      margin-left: 2px;
+      padding: 10px 20px;
+      background-color: #8c8c8c;
       border: 1px solid #8c8c8c;
       border-radius: 6px;
-      padding: 10px 20px;
-      margin-left: 2px;
-
-      background-color: #8c8c8c;
       color: #f1f1f1;
+      text-decoration: none;
     }
   }
 }

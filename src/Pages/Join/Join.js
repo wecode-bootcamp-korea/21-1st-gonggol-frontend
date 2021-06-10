@@ -6,9 +6,7 @@ class Join extends Component {
   render() {
     return (
       <div className="Join">
-        <div className="tittle">
-          <h1>기본정보</h1>
-        </div>
+        <div className="tittle">기본정보</div>
         <div className="Container">
           <div className="item">
             아이디<span className="required">*</span>
