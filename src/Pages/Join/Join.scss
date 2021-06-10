@@ -1,4 +1,4 @@
-.Join {
+.join {
   margin: 100px;
   padding: 75px 0 40px;
   width: 1200px;
@@ -8,7 +8,7 @@
     font-weight: bold;
   }
 
-  .Container {
+  .container {
     display: grid;
     grid-template-columns: 2fr 13fr;
     align-items: stretch;
@@ -80,6 +80,7 @@
       }
     }
   }
+
   .joinMain {
     margin: 20px 0 50px;
     text-align: center;

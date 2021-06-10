@@ -1,35 +1,25 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import InputBox from './InputBox/InputBox';
 import './Join.scss';
 
 class Join extends Component {
   render() {
     return (
-      <div className="Join">
+      <div className="join">
         <div className="tittle">기본정보</div>
-        <div className="Container">
-          <div className="item">
-            아이디<span className="required">*</span>
-          </div>
-          <div className="item">
-            <input type="text" className="idInput" />
-            <span>(영문소문자/숫자, 4~16자)</span>
-          </div>
-          <div className="item">
-            비밀번호<span className="required">*</span>
-          </div>
-          <div className="item">
-            <input type="password" className="psInput" />
-            <span>
-              (영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 8자~16자)
-            </span>
-          </div>
-          <div className="item">
-            이름<span className="required">*</span>
-          </div>
-          <div className="item">
-            <input type="text" />
-          </div>
+        <div className="container">
+          {INPUTS.map((ele, idx) => {
+            return (
+              <InputBox
+                key={idx}
+                name={ele.name}
+                type={ele.type}
+                text={ele.text}
+              />
+            );
+          })}
+
           <div className="item">
             주소<span className="required">*</span>
           </div>
@@ -45,7 +35,7 @@ class Join extends Component {
               <span>나머지주소</span>
             </div>
           </div>
-          <div className="item" classNam="flex">
+          <div className="item">
             휴대전화<span className="required">*</span>
           </div>
           <div className="item">
@@ -108,5 +98,18 @@ class Join extends Component {
     );
   }
 }
+
+const INPUTS = [
+  { name: '아이디', type: 'text', text: '(영문소문자/숫자, 4~16자)' },
+  {
+    name: '비밀번호',
+    type: 'password',
+    text: '(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 8자~16자)',
+  },
+  {
+    name: '이름',
+    type: 'text',
+  },
+];
 
 export default Join;
