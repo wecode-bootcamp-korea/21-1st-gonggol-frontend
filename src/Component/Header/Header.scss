@@ -160,19 +160,22 @@
 
       #no-border {
         height: 470px;
-        background-color: rgba(208, 208, 209, 0.164);
+        background-color: #f9f9f9;
+        opacity: 0.96;
       }
     }
 
     .bottomCategory {
-      position: relative;
       height: 45px;
       width: 100%;
       border-bottom: 1px solid #dfdfdf;
 
       &.no-border {
+        position: absolute;
+        top: 300px;
         height: 0;
         border: none;
+        z-index: 100;
       }
 
       .categoryContainer {
@@ -238,7 +241,7 @@
           a {
             @include flexSet(center, center, row);
             padding: 15px;
-            color: $gray-font-color;
+            color: #787878;
             text-align: center;
             text-decoration: none;
           }
