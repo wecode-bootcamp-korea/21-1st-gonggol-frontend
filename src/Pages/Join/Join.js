@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import InputBox from './InputBox/InputBox';
+import CheckBox from './CheckBox/CheckBox';
 import './Join.scss';
 
 class Join extends Component {
@@ -19,7 +20,6 @@ class Join extends Component {
               />
             );
           })}
-
           <div className="item">
             주소<span className="required">*</span>
           </div>
@@ -52,18 +52,11 @@ class Join extends Component {
             -
             <input type="text" className="phone-input" />
           </div>
-          <div className="item">
-            SMS 수신여부<span className="required">*</span>
-          </div>
-          <div className="item">
-            <label>
-              <input type="checkbox" />
-              동의함
-            </label>
-            <p className="text">
-              쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다.
-            </p>
-          </div>
+          <CheckBox
+            name="SMS 수신여부"
+            type="checkbox"
+            text="쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다."
+          />
           <div className="item">
             이메일<span className="required">*</span>
           </div>
@@ -100,11 +93,11 @@ class Join extends Component {
 }
 
 const INPUTS = [
-  { name: '아이디', type: 'text', text: '(영문소문자/숫자, 4~16자)' },
+  { name: '아이디', type: 'text', text: '(영문소문자/숫자, 8~12자)' },
   {
     name: '비밀번호',
     type: 'password',
-    text: '(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 8자~16자)',
+    text: '(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 8자~12자)',
   },
   {
     name: '이름',
