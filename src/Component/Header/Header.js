@@ -1,5 +1,6 @@
 import React from 'react';
 import MainNavbar from './MainNavbar';
+import { Link } from 'react-router-dom';
 import './Header.scss';
 
 class Header extends React.Component {
@@ -28,15 +29,15 @@ class Header extends React.Component {
         <div className="headerTop">
           <div className="topWrapper">
             <div className="headerLogo">
-              <a href="#" className="logoName">
+              <Link to="#" className="logoName">
                 GONGGOL
-              </a>
+              </Link>
             </div>
             <ul className="headerMenu">
               {MENUS.map((string, idx) => {
                 return (
                   <li key={idx} className="listContainer">
-                    <a href="#">{string}</a>
+                    <Link to="#">{string}</Link>
                   </li>
                 );
               })}
@@ -47,13 +48,13 @@ class Header extends React.Component {
                     <i className="fa fa-caret-down"></i>
                   </button>
                   <div className="dropContent">
-                    <a href="#">구매정보</a>
-                    <a href="#">배송조회</a>
-                    <a href="#">개인정보</a>
-                    <a href="#">나의리뷰</a>
-                    <a href="#" className="lastContent">
+                    <Link to="#">구매정보</Link>
+                    <Link to="#">배송조회</Link>
+                    <Link to="#">개인정보</Link>
+                    <Link to="#">나의리뷰</Link>
+                    <Link to="#" className="lastContent">
                       1:1문의
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </li>
@@ -79,9 +80,9 @@ class Header extends React.Component {
               {CATEGORIES.map((item, idx) => {
                 return (
                   <li key={idx} className="allCategory">
-                    <a className="categoryName" href="#">
+                    <Link to="#" className="categoryName">
                       {item}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}
