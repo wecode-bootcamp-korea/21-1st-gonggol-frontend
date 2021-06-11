@@ -55,6 +55,7 @@ class Join extends Component {
           <CheckBox
             name="SMS 수신여부"
             type="checkbox"
+            consent="동의함"
             text="쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다."
           />
           <div className="item">
@@ -63,21 +64,12 @@ class Join extends Component {
           <div className="item">
             <input type="text" className="mailInput" />
           </div>
-          <div className="item">
-            이메일 수신여부<span className="required">*</span>
-          </div>
-          <div className="item">
-            <div className="check-wrap">
-              <label>
-                <input type="checkbox" />
-                <span>동의함</span>
-              </label>
-            </div>
-            <p className="text">
-              쇼핑몰에서 제공하는 유익한 이벤트 소식을 이메일로 받으실 수
-              있습니다.
-            </p>
-          </div>
+          <CheckBox
+            name="SMS 수신여부"
+            type="checkbox"
+            consent="동의함"
+            text="쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다."
+          />
         </div>
         <div className="joinMain">
           <Link to="" className="goMain1">

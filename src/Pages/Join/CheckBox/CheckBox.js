@@ -6,10 +6,11 @@ class CheckBox extends React.Component {
       <>
         <label className="item">
           {this.props.name}
-          {<span>{this.props.consent}</span>}
+          <span className="required">*</span>
         </label>
         <div className="item">
           <input type={this.props.type} />
+          {<span>{this.props.consent}</span>}
           {<p>{this.props.text}</p>}
         </div>
       </>
