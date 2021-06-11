@@ -46,7 +46,7 @@ class Footer extends React.Component {
           </div>
           <div className="verifiedSeal">
             <img
-              src="https://lh3.googleusercontent.com/proxy/6rWkCixGZTQ-q0vRGFhzdO4YGvsm7GxF2q4kohKeqs9W2zHgeMLn3FXqFSGapGpNFBvKA_ya8uW2db8TtbP0redAZkYptKWYzd_vu0GoSsKCTGKO"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThnwX1CRsWcDuG1ntUnVrEwnRehdklt11l8w&usqp=CAU"
               alt="인증마크"
             />
           </div>
