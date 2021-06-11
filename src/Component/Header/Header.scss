@@ -184,14 +184,13 @@
           position: relative;
           float: left;
           width: 200px;
+          text-align: center;
 
           .categoryName {
             text-decoration: none;
-            position: relative;
             padding: 1px 0px;
             line-height: 45px;
             color: black;
-            text-align: center;
             font-size: 18px;
 
             &:hover::after {

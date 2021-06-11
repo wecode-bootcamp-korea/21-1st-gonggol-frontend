@@ -4,11 +4,11 @@ import './Footer.scss';
 class Footer extends React.Component {
   render() {
     return (
-      <div className="footerContainer">
+      <footer className="footerContainer">
         <div className="footerWrapper">
           <span className="footer-logo">GONGGOL</span>
           <div className="brandInfo">
-            <p class="infoTop">
+            <p className="infoTop">
               <a href="#">
                 <strong>이용약관</strong>
               </a>
@@ -17,7 +17,7 @@ class Footer extends React.Component {
                 <strong>개인정보처리방침</strong>
               </a>
             </p>
-            <p className="infoMiddle">
+            <div className="infoMiddle">
               (주)에스제이그룹
               <span>|</span>
               대표 : 이주영
@@ -41,16 +41,16 @@ class Footer extends React.Component {
               <p className="copyrightContainer">
                 COPYRIGHT(C) 2016 GONGGGOLⓇ ALL RIGHT RESERVED
               </p>
-            </p>
+            </div>
           </div>
           <div className="verifiedSeal">
             <img
               src="https://lh3.googleusercontent.com/proxy/6rWkCixGZTQ-q0vRGFhzdO4YGvsm7GxF2q4kohKeqs9W2zHgeMLn3FXqFSGapGpNFBvKA_ya8uW2db8TtbP0redAZkYptKWYzd_vu0GoSsKCTGKO"
               alt="인증마크"
-            ></img>
+            />
           </div>
         </div>
-      </div>
+      </footer>
     );
   }
 }

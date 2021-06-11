@@ -1,34 +1,27 @@
 import React from 'react';
 import MainNavbar from './MainNavbar';
-import CATEGORY from './categoryData';
 import './Header.scss';
 
 class Header extends React.Component {
   constructor() {
     super();
     this.state = {
-      menu: ['LOGIN', 'JOIN', 'CART', 'ORDER'],
-      category: [
-        'HEADWEAR',
-        'BAG',
-        'CLOTHES',
-        'SHOES',
-        'ACC',
-        'COMMUNITY',
-        'LOOKBOOK',
-      ],
       categoryList: [],
     };
   }
 
   componentDidMount() {
-    this.setState({
-      categoryList: CATEGORY,
-    });
+    fetch('/data/HeaderCategory.json')
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          categoryList: data,
+        });
+      });
   }
 
   render() {
-    const { menu, category, categoryList } = this.state;
+    const { categoryList } = this.state;
 
     return (
       <div className="headerContainer">
@@ -40,7 +33,7 @@ class Header extends React.Component {
               </a>
             </div>
             <ul className="headerMenu">
-              {menu.map((string, idx) => {
+              {MENUS.map((string, idx) => {
                 return (
                   <li key={idx} className="listContainer">
                     <a href="#">{string}</a>
@@ -51,7 +44,7 @@ class Header extends React.Component {
                 <div className="dropDown">
                   <button className="dropButton">
                     MY PAGE
-                    <i class="fa fa-caret-down"></i>
+                    <i className="fa fa-caret-down"></i>
                   </button>
                   <div className="dropContent">
                     <a href="#">구매정보</a>
@@ -69,7 +62,7 @@ class Header extends React.Component {
         </div>
         <div className="headerMiddle">
           <div className="mainLogo">
-            <img src="../../../images/common/logo_tm.png" alt="메인로고" />
+            <img src="/images/common/logo_tm.png" alt="메인로고" />
           </div>
           <div className="searchContainer">
             <div className="searchWrapper">
@@ -83,7 +76,7 @@ class Header extends React.Component {
         <div className="headerBottom">
           <div className="bottomCategory">
             <ul className="categoryContainer">
-              {category.map((item, idx) => {
+              {CATEGORIES.map((item, idx) => {
                 return (
                   <li key={idx} className="allCategory">
                     <a className="categoryName" href="#">
@@ -112,5 +105,16 @@ class Header extends React.Component {
     );
   }
 }
+
+const MENUS = ['LOGIN', 'JOIN', 'CART', 'ORDER'];
+const CATEGORIES = [
+  'HEADWEAR',
+  'BAG',
+  'CLOTHES',
+  'SHOES',
+  'ACC',
+  'COMMUNITY',
+  'LOOKBOOK',
+];
 
 export default Header;

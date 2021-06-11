@@ -8,8 +8,12 @@ class MainNavbar extends Component {
         <div className={`listWrapper ${no === 1 && 'firstList'}`}>
           <ul className="listMenu">
             <li>
-              {categories.map(el => {
-                return <a href={el.url}>{el.name}</a>;
+              {categories.map((el, index) => {
+                return (
+                  <a key={index} href={el.url}>
+                    {el.name}
+                  </a>
+                );
               })}
             </li>
           </ul>
