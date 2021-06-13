@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import Breadcrumbs from '../../Component/Breadcrumbs/Breadcrumbs';
+import ImageSlide from './ImageSlide/ImageSlide';
 import QuantityController from '../../Component/QuantityController/QuantityController';
 import './Product.scss';
 
@@ -9,7 +10,6 @@ class Product extends React.Component {
 
     this.state = {
       productInfo: {},
-      imageCurrentNo: 1,
       selectedProducts: [],
     };
   }
@@ -81,6 +81,16 @@ class Product extends React.Component {
     });
   };
 
+  onDeleteOptionItem = size => {
+    console.log(size);
+    this.setState({
+      selectedProducts: this.state.selectedProducts?.filter(product => {
+        console.log(product);
+        if (product.size !== size) return product;
+      }),
+    });
+  };
+
   render() {
     const { product_image } = this.state.productInfo;
 
@@ -92,18 +102,13 @@ class Product extends React.Component {
               <Breadcrumbs paths={this.state.productInfo.paths} />
             </div>
             <div className="productImage">
-              <span>{this.state.imageCurrentNo}</span>
-              <span>/</span>
-              <span>{product_image && product_image.length}</span>
-              <div>
-                <img src={product_image && product_image[0]} />
-              </div>
+              <ImageSlide images={product_image} />
             </div>
             <div className="productDescription">
               <h2 className="name">{this.state.productInfo.product_name}</h2>
               <dl className="descTable">
-                <dt>판매가</dt>
-                <dd>
+                <dt className="red">판매가</dt>
+                <dd className="red">
                   {this.state.productInfo.product_price?.toLocaleString()}원
                 </dd>
                 <dt>상품소재</dt>
@@ -166,7 +171,12 @@ class Product extends React.Component {
                               )
                             }
                           />
-                          <button className="delete">
+                          <button
+                            className="delete"
+                            onClick={() =>
+                              this.onDeleteOptionItem(product.size)
+                            }
+                          >
                             <i class="far fa-times-circle"></i>
                           </button>
                         </dd>
@@ -179,12 +189,23 @@ class Product extends React.Component {
                 </>
               )}
               <dl className="descTable">
-                <dt>총 상품금액(수량)</dt>
+                <dt>
+                  <strong>총 상품금액(수량)</strong>
+                </dt>
                 <dd className="price">
-                  {this.state.selectedProducts
-                    ?.reduce((acc, cur) => acc + cur.price * cur.stock, 0)
-                    .toLocaleString()}
-                  원
+                  <span className="totalPrice">
+                    {this.state.selectedProducts
+                      ?.reduce((acc, cur) => acc + cur.price * cur.stock, 0)
+                      .toLocaleString()}
+                    원
+                  </span>
+                  <span className="totalQuantity">
+                    (
+                    {this.state.selectedProducts
+                      ?.reduce((acc, cur) => acc + cur.stock, 0)
+                      .toLocaleString()}
+                    개)
+                  </span>
                 </dd>
               </dl>
               <dl>
