@@ -1,0 +1,40 @@
+@import '../../../Styles/variables.scss';
+
+.imageSlider {
+  position: relative;
+  width: 500vw;
+
+  .imageContainer {
+    li {
+      img {
+        height: 700px;
+        width: 100vw;
+        overflow: hidden;
+      }
+    }
+  }
+
+  button {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    cursor: pointer;
+    background-color: inherit;
+
+    i {
+      color: white;
+    }
+
+    .fa-chevron-left {
+      position: absolute;
+      top: 50%;
+      left: 0.5%;
+    }
+
+    .fa-chevron-right {
+      position: absolute;
+      top: 50%;
+      left: 19%;
+    }
+  }
+}
