@@ -16,15 +16,15 @@ class ProductDetail extends React.Component {
     } = this.props;
 
     return (
-      <div className="ProductDetail">
-        <div className="product-thumbnail">
+      <div className="productDetail">
+        <div className="productThumbnail">
           <Link to="/product">
             <img alt={`${name}의 이미지`} src={mainImg} />
             {hoverImg && (
               <img
                 alt={`${name}의 마우스오버 이미지`}
                 src={hoverImg}
-                class="hover_image"
+                class="hoverImage"
               />
             )}
           </Link>
@@ -39,13 +39,12 @@ class ProductDetail extends React.Component {
           </div>
           <div className="spec">
             {discountRate < 1 && (
-              <div className="original-price">{price.toLocaleString()}원</div>
+              <div className="originalPrice">{price.toLocaleString()}원</div>
             )}
-            <div className="sales-price">
+            <div className="salesPrice">
               {(price * (discountRate ? discountRate : 1)).toLocaleString()}원
             </div>
           </div>
-          <div>{likeFlag}</div>
         </div>
       </div>
     );

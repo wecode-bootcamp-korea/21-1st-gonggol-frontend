@@ -1,111 +1,118 @@
 {
-  "totalElements": 77,
-  "totalPages": 10,
-  "size": 8,
-  "products": [
+  "product_list": [
     {
-      "productId": 1,
-      "productName": "공골 옥스퍼드 셔치 777S 그레이",
-      "productImage": {
-        "main": "https://cdn.pixabay.com/photo/2016/11/29/09/41/bag-1868758_1280.jpg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
+      "product_total": 6,
+      "product_id": 1,
+      "product_name": "뉴투어 라지 백팩",
+      "product_price": "208000.000",
       "discount_rate": 1,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": false,
-      "like_flag": true
+      "product_image": [
+        "//www.kangolkorea.com/web/product/tiny/202103/df72e9afa9b6b546f92c696b3b2fe76a.jpg",
+        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
+        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
+      ],
+      "product_tag": [
+        {
+          "new": true,
+          "sale": true,
+          "best": false
+        }
+      ]
     },
     {
-      "productId": 2,
-      "productName": "상품2입니다.",
-      "productImage": {
-        "main": "https://kangolkorea.com/web/product/tiny/202103/a28b8534139c8aa5d2959a591c0520bb.jpg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
-      "discount_rate": 0.9,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": true,
-      "like_flag": true
+      "product_total": 6,
+      "product_id": 2,
+      "product_name": "플래쉬 라지 백팩",
+      "product_price": "178000.000",
+      "discount_rate": 1,
+      "product_image": [
+        "//www.kangolkorea.com/web/product/tiny/202103/df72e9afa9b6b546f92c696b3b2fe76a.jpg",
+        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
+        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
+      ],
+      "product_tag": [
+        {
+          "new": true,
+          "sale": true,
+          "best": false
+        }
+      ]
     },
     {
-      "productId": 3,
-      "productName": "상품3입니다.",
-      "productImage": {
-        "main": "/images/items/item_headwear_01.jpeg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
+      "product_total": 6,
+      "product_id": 3,
+      "product_name": "에픽 플래치 백팩",
+      "product_price": "168000.000",
       "discount_rate": 1,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": false,
-      "like_flag": true
+      "product_image": [
+        "//www.kangolkorea.com/web/product/tiny/202103/df72e9afa9b6b546f92c696b3b2fe76a.jpg",
+        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
+        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
+      ],
+      "product_tag": [
+        {
+          "new": true,
+          "sale": true,
+          "best": false
+        }
+      ]
     },
     {
-      "productId": 4,
-      "productName": "상품4입니다.",
-      "productImage": {
-        "main": "/images/items/item_headwear_01.jpeg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
+      "product_total": 6,
+      "product_id": 4,
+      "product_name": "트랩 투웨이 미니 토트백",
+      "product_price": "52000.000",
       "discount_rate": 1,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": true,
-      "like_flag": true
+      "product_image": [
+        "//www.kangolkorea.com/web/product/tiny/202103/df72e9afa9b6b546f92c696b3b2fe76a.jpg",
+        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
+        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
+      ],
+      "product_tag": [
+        {
+          "new": true,
+          "sale": true,
+          "best": false
+        }
+      ]
     },
     {
-      "productId": 5,
-      "productName": "상품5입니다.",
-      "productImage": {
-        "main": "/images/items/item_headwear_01.jpeg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
+      "product_total": 6,
+      "product_id": 5,
+      "product_name": "레위스 드로스트링 크로스",
+      "product_price": "55000.000",
       "discount_rate": 1,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": true,
-      "like_flag": true
+      "product_image": [
+        "//www.kangolkorea.com/web/product/tiny/202103/df72e9afa9b6b546f92c696b3b2fe76a.jpg",
+        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
+        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
+      ],
+      "product_tag": [
+        {
+          "new": true,
+          "sale": true,
+          "best": false
+        }
+      ]
     },
     {
-      "productId": 5,
-      "productName": "상품5입니다.",
-      "productImage": {
-        "main": "/images/items/item_headwear_01.jpeg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
+      "product_total": 6,
+      "product_id": 6,
+      "product_name": "트리코 니트 크로스백",
+      "product_price": "42000.000",
       "discount_rate": 1,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": true,
-      "like_flag": true
-    },
-    {
-      "productId": 5,
-      "productName": "상품5입니다.",
-      "productImage": {
-        "main": "/images/items/item_headwear_01.jpeg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
-      "discount_rate": 1,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": true,
-      "like_flag": true
-    },
-    {
-      "productId": 5,
-      "productName": "상품5입니다.",
-      "productImage": {
-        "main": "/images/items/item_headwear_01.jpeg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
-      "discount_rate": 1,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": true,
-      "like_flag": true
+      "product_image": [
+        "//www.kangolkorea.com/web/product/tiny/202103/df72e9afa9b6b546f92c696b3b2fe76a.jpg",
+        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
+        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
+      ],
+      "product_tag": [
+        {
+          "new": true,
+          "sale": true,
+          "best": false
+        }
+      ]
     }
   ]
 }

@@ -6,9 +6,9 @@ class ContentTitle extends React.Component {
     const { children } = this.props;
     return (
       <div className="ContentTitle">
-        <h2>
+        <h1>
           <span>{children}</span>
-        </h2>
+        </h1>
       </div>
     );
   }

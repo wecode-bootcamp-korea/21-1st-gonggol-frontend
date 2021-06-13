@@ -1,6 +1,6 @@
 @import '../../Styles/_variables.scss';
 
-.Category {
+.category {
   @include flexSet($flexDirection: column);
   padding-top: 50px;
 
@@ -11,12 +11,14 @@
     border: 1px solid #eee;
     cursor: pointer;
   }
+
   .button:hover {
     background-color: #0a4d8b;
     color: #fff;
     transition: background-color 0.5s;
   }
-  .more-content {
+
+  .moreContent {
     margin: 20px;
   }
 }

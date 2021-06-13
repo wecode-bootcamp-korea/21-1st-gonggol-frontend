@@ -7,20 +7,22 @@ class SubCategory extends React.Component {
     const { subCategories, currentCategory, sortBy, onChangeSubCategory } =
       this.props;
     return (
-      <div className="SubCategory">
-        <ul className="subcate-nav">
+      <div className="subCategory">
+        <ul className="subCategoryNav">
           {subCategories?.map(category => (
-            <li key={category.id}>
+            <li key={category.categoryNo}>
               <Link
-                onClick={() => onChangeSubCategory(category.id)}
-                className={category.id === currentCategory && 'selected'}
+                onClick={() => onChangeSubCategory(category.categoryNo)}
+                className={
+                  category.categoryNo === currentCategory && 'selected'
+                }
               >
-                {category.name}
+                {category.categoryName}
               </Link>
             </li>
           ))}
         </ul>
-        <div className="product-filter">
+        <div className="productFilter">
           <select>
             <option>정렬방식</option>
             <option>신상품</option>

@@ -1,12 +1,12 @@
 @import '../../../Styles/_variables.scss';
 
-.SubCategory {
+.subCategory {
   @include flexSet;
   position: relative;
   width: 100%;
   max-width: $max-width;
 
-  .subcate-nav {
+  .subCategoryNav {
     width: 55%;
     margin: 0 auto 40px;
     overflow: hidden;
@@ -39,7 +39,7 @@
     }
   }
 
-  .product-filter {
+  .productFilter {
     position: absolute;
     right: 10px;
     top: 0;

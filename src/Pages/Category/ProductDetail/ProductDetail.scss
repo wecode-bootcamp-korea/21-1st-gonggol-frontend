@@ -1,10 +1,10 @@
-.ProductDetail {
+.productDetail {
   display: flex;
   flex-direction: column;
   margin: 20px 0;
   text-align: center;
 
-  .product-thumbnail {
+  .productThumbnail {
     position: relative;
     display: flex;
     align-items: center;
@@ -24,21 +24,25 @@
 
     .icon {
       font-size: 9px;
+
       span {
         display: inline-block;
         padding: 3px 5px;
         margin-right: 2px;
         border-radius: 5px;
       }
+
       .new {
         background-color: #898989;
         color: #fff;
       }
+
       .sale {
         background-color: #0a4d8b;
         color: #fff;
       }
     }
+
     .name {
       font-size: 13px;
       color: #555555;
@@ -46,17 +50,19 @@
     }
 
     .spec {
-      .original-price {
+      .originalPrice {
         font-size: 8px;
         text-decoration: line-through;
       }
-      .sales-price {
+
+      .salesPrice {
         font-size: 15px;
         color: #094c8b;
         font-weight: bold;
       }
     }
   }
+
   .description > div {
     padding-top: 6px;
   }
