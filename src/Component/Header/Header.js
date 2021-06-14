@@ -88,7 +88,7 @@ class Header extends React.Component {
               })}
             </ul>
           </div>
-          <div className="bottomCategory no-border" id="no-border">
+          <div className="bottomCategory noBorder" id="noBorder">
             <div className="categoryList">
               <div className="categoryContainer">
                 {categoryList.map(cate => (

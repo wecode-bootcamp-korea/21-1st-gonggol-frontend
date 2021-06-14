@@ -7,7 +7,7 @@ class Footer extends React.Component {
     return (
       <footer className="footerContainer">
         <div className="footerWrapper">
-          <span className="footer-logo">GONGGOL</span>
+          <span className="footerLogo">GONGGOL</span>
           <div className="brandInfo">
             <p className="infoTop">
               <Link to="#">
