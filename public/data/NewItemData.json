@@ -1,56 +1,150 @@
-[
-  {
-    "no": 1,
-    "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
-    "itemName": "레터 티셔츠",
-    "itemPrice": "55,000원"
-  },
-  {
-    "no": 2,
-    "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
-    "itemName": "레터 티셔츠1",
-    "itemPrice": "55,000원"
-  },
-  {
-    "no": 3,
-    "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
-    "itemName": "레터 티셔츠2",
-    "itemPrice": "55,000원"
-  },
-  {
-    "no": 4,
-    "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
-    "itemName": "레터 티셔츠3",
-    "itemPrice": "55,000원"
-  },
-  {
-    "no": 5,
-    "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
-    "itemName": "레터 티셔츠4",
-    "itemPrice": "55,000원"
-  },
-  {
-    "no": 6,
-    "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
-    "itemName": "레터 티셔츠5",
-    "itemPrice": "55,000원"
-  },
-  {
-    "no": 7,
-    "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
-    "itemName": "레터 티셔츠6",
-    "itemPrice": "55,000원"
-  },
-  {
-    "no": 8,
-    "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
-    "itemName": "레터 티셔츠7",
-    "itemPrice": "55,000원"
-  },
-  {
-    "no": 9,
-    "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
-    "itemName": "레터 티셔츠8",
-    "itemPrice": "55,000원"
-  }
-]
+{
+  "newProduct": [
+    {
+      "no": 1,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠",
+      "itemPrice": 55000
+    },
+    {
+      "no": 2,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠1",
+      "itemPrice": 45000
+    },
+    {
+      "no": 3,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠2",
+      "itemPrice": 55000
+    },
+    {
+      "no": 4,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠3",
+      "itemPrice": 45000
+    },
+    {
+      "no": 5,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠4",
+      "itemPrice": 55000
+    },
+    {
+      "no": 6,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠5",
+      "itemPrice": 45000
+    },
+    {
+      "no": 7,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠6",
+      "itemPrice": 55000
+    },
+    {
+      "no": 8,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠7",
+      "itemPrice": 55000
+    },
+    {
+      "no": 9,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠8",
+      "itemPrice": 55000
+    },
+    {
+      "no": 10,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠9",
+      "itemPrice": 55000
+    },
+    {
+      "no": 11,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠10",
+      "itemPrice": 55000
+    },
+    {
+      "no": 12,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠11",
+      "itemPrice": 55000
+    },
+    {
+      "no": 13,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠12",
+      "itemPrice": 55000
+    },
+    {
+      "no": 14,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠13",
+      "itemPrice": 55000
+    },
+    {
+      "no": 15,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠14",
+      "itemPrice": 55000
+    },
+    {
+      "no": 16,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠15",
+      "itemPrice": 55000
+    },
+    {
+      "no": 17,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠16",
+      "itemPrice": 55000
+    },
+    {
+      "no": 18,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠17",
+      "itemPrice": 55000
+    }
+  ],
+  "bestProduct": [
+    {
+      "no": 1,
+      "itemSrc": "https://www.kangolkorea.com/web/product/medium/202102/df3e542563687a5bc9dd06fe2608df0a.jpg",
+      "itemName": "하트 리액트 모자",
+      "itemPrice": 105000
+    },
+    {
+      "no": 2,
+      "itemSrc": "https://www.kangolkorea.com/web/product/tiny/202101/70541b82a3b2368061ca12b53d2903b0.jpg",
+      "itemName": "에코 프랜들리백",
+      "itemPrice": 78000
+    },
+    {
+      "no": 3,
+      "itemSrc": "https://www.kangolkorea.com/web/product/tiny/202101/fad44a3007dc9ea956814a8603df5bf5.jpg",
+      "itemName": "컨버스 토트백",
+      "itemPrice": 55000
+    },
+    {
+      "no": 4,
+      "itemSrc": "https://kangolkorea.com/web/product/tiny/201808/ea4013829f76a5ddaca9693b7522bc83.jpg",
+      "itemName": "다니엘 2005 블랙",
+      "itemPrice": 68000
+    },
+    {
+      "no": 5,
+      "itemSrc": "https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg",
+      "itemName": "레터 티셔츠4",
+      "itemPrice": 55000
+    },
+    {
+      "no": 6,
+      "itemSrc": "https://www.kangolkorea.com/web/product/medium/202103/93dc81ef0e580776edf91e399f2ab80b.jpg",
+      "itemName": "우먼스 베이직 티셔츠",
+      "itemPrice": 45000
+    }
+  ]
+}

@@ -6,8 +6,28 @@ class Slider extends Component {
     super();
     this.state = {
       transLoctation: 0,
+      transEffect: '',
     };
   }
+
+  nextBtn = () => {
+    if (this.state.transLocation > -600) {
+      this.setState({
+        transLocation: this.state.transLocation - 100,
+        transEffect: '1s ease-in-out',
+      });
+    }
+  };
+
+  prevBtn = () => {
+    if (this.state.transLocation < 0) {
+      this.setState({
+        transLocation: this.state.transLocation + 100,
+        transEffect: '1s ease-in-out',
+      });
+    }
+  };
+
   render() {
     return (
       <div className="imageSlider">
