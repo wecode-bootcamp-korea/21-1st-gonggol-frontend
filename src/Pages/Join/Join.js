@@ -5,6 +5,10 @@ import CheckBox from './CheckBox/CheckBox';
 import './Join.scss';
 
 class Join extends Component {
+  this.state = {
+    loginId: ''
+    loginPw: ''
+  }
   render() {
     return (
       <div className="join">
@@ -17,6 +21,14 @@ class Join extends Component {
                 name={ele.name}
                 type={ele.type}
                 text={ele.text}
+                value={this.state.value}
+                onChange={
+                  (e) => {
+                    this.setState({
+                    
+                    })
+                  }
+                }
               />
             );
           })}
@@ -65,7 +77,7 @@ class Join extends Component {
             <input type="text" className="mailInput" />
           </div>
           <CheckBox
-            name="SMS 수신여부"
+            name="이메일 수신여부"
             type="checkbox"
             consent="동의함"
             text="쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다."
@@ -90,6 +102,10 @@ const INPUTS = [
     name: '비밀번호',
     type: 'password',
     text: '(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 8자~12자)',
+  },
+  {
+    name: '비밀번호 확인',
+    type: 'password',
   },
   {
     name: '이름',
