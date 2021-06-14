@@ -1,89 +1,98 @@
-.Login {
-  margin: 50px 380px;
+.login {
+  display: grid;
+  place-items: center;
+  height: 100vh;
 
-  .back {
-    background-color: #fff;
-    border: 1px solid #efefef;
-    border-radius: 15px;
-    color: #222;
-    padding: 6px 17px;
-    text-decoration: none;
-    font-size: 13px;
-  }
-
-  .logo {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-    width: 400px;
-    border-bottom: 1px solid #e1e1e1;
-  }
-
-  .logo img {
-    width: auto;
-    height: 25px;
-  }
-
-  .container {
-    padding: 35px 5px;
+  .loginInner {
     width: 400px;
 
-    h1 {
-      margin-bottom: 40px;
-      font-weight: bold;
-      font-size: 25px;
-    }
-
-    .loginInput {
-      border-radius: 5px;
-      border: 1px solid #e1e1e1;
-      overflow: hidden;
-      margin-bottom: 40px;
-
-      input {
-        padding: 0 15px;
-        height: 50px;
-        width: 100%;
-        border: none;
-        border-radius: 0;
-        text-align: left;
-        font-size: 14px;
-      }
-
-      .psInput {
-        border-top: 1px solid #e1e1e1;
-      }
-    }
-
-    .button {
-      padding: 10px 144px;
-      height: 45px;
-      border: 1px solid #31363c;
-      border-radius: 5px;
-      background-color: #31363c;
-      color: #fff;
-      font-weight: bold;
-      font-size: 15px;
-      cursor: pointer;
-    }
-    // .button:hover {
-    //  background-color: #0a4d8b;
-    //  color: #fff;
-    // transition: background-color 0.5s;
-    //}
-    .link {
-      text-align: right;
-      margin: 25px 0 0;
-    }
-
-    .memberJoin {
+    .back {
+      padding: 6px 17px;
+      border: 1px solid #efefef;
+      border-radius: 15px;
+      font-size: 13px;
       text-decoration: none;
-      display: inline-block;
-      margin-left: 12px;
-      padding-left: 12px;
-      font-size: 12px;
-      font-weight: lighter;
+      background-color: #fff;
       color: #222;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+      border-bottom: 1px solid #e1e1e1;
+    }
+
+    .logo img {
+      width: auto;
+      height: 25px;
+    }
+
+    .tittle {
+      padding-bottom: 30px;
+      font-weight: bold;
+      font-size: 27px;
+    }
+    .container {
+      padding: 35px 5px;
+
+      h1 {
+        margin-bottom: 40px;
+        font-weight: bold;
+        font-size: 25px;
+      }
+
+      .loginInput {
+        margin-bottom: 40px;
+        overflow: hidden;
+        border-radius: 5px;
+        border: 1px solid #e1e1e1;
+
+        input {
+          padding: 0 15px;
+          height: 50px;
+          width: 100%;
+          border: none;
+          border-radius: 0;
+          text-align: left;
+          font-size: 14px;
+        }
+
+        .psInput {
+          border-top: 1px solid #e1e1e1;
+        }
+      }
+
+      .button {
+        padding: 10px 144px;
+        height: 45px;
+        border: 1px solid #31363c;
+        border-radius: 5px;
+        background-color: #31363c;
+        color: #fff;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      // .button:hover {
+      //  background-color: #0a4d8b;
+      //  color: #fff;
+      // transition: background-color 0.5s;
+      //}
+      .link {
+        text-align: right;
+        margin: 25px 0 0;
+      }
+
+      .memberJoin {
+        display: inline-block;
+        margin-left: 12px;
+        padding-left: 12px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: lighter;
+        color: #222;
+      }
     }
   }
 }
