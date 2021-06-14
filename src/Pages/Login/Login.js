@@ -137,6 +137,7 @@ const INPUTS = [
     name: 'loginPw'
     placeholder: '비밀번호'
     value: '{this.state.loginPw}'
+    onChange:'{this.handleloginIput}'
   }
 ];
 
