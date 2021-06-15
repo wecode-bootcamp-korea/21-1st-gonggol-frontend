@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import InputBox from './InputBox/InputBox';
 import CheckBox from './CheckBox/CheckBox';
+import Header from '../../Component/Header/Header';
+import Footer from '../../Component/Footer/Footer';
 import './Join.scss';
 
 class Join extends Component {
@@ -52,80 +54,84 @@ class Join extends Component {
   render() {
     console.log(this.state);
     return (
-      <div className="join">
-        <div className="tittle">기본정보</div>
-        <div className="container">
-          {INPUTS.map((ele, idx) => {
-            return (
-              <InputBox
-                key={idx}
-                name={ele.name}
-                title={ele.title}
-                type={ele.type}
-                text={ele.text}
-                value={this.state[ele.name]}
-                onChange={this.handleJoinInput}
-              />
-            );
-          })}
-          <div className="item">
-            주소<span className="required">*</span>
-          </div>
-          <div className="item">
-            <input type="text" readonly="readonly" />
-            <button className="add1">우편번호</button>
-            <div className="add2">
-              <input type="text" className="phoneInput" readonly="readonly" />
-              <span>기본주소</span>
+      <>
+        <Header />
+        <div className="join">
+          <div className="tittle">기본정보</div>
+          <div className="container">
+            {INPUTS.map((ele, idx) => {
+              return (
+                <InputBox
+                  key={idx}
+                  name={ele.name}
+                  title={ele.title}
+                  type={ele.type}
+                  text={ele.text}
+                  value={this.state[ele.name]}
+                  onChange={this.handleJoinInput}
+                />
+              );
+            })}
+            <div className="item">
+              주소<span className="required">*</span>
             </div>
-            <div className="add2">
-              <input type="text" className="phoneInput" />
-              <span>나머지주소</span>
+            <div className="item">
+              <input type="text" readonly="readonly" />
+              <button className="add1">우편번호</button>
+              <div className="add2">
+                <input type="text" className="phoneInput" readonly="readonly" />
+                <span>기본주소</span>
+              </div>
+              <div className="add2">
+                <input type="text" className="phoneInput" />
+                <span>나머지주소</span>
+              </div>
             </div>
+            <div className="item">
+              휴대전화<span className="required">*</span>
+            </div>
+            <div className="item">
+              <select className="phone-select">
+                <option value="010">010</option>
+                <option value="011">011</option>
+                <option value="016">016</option>
+                <option value="017">017</option>
+                <option value="018">018</option>
+                <option value="019">019</option>
+              </select>
+              -
+              <input type="text" className="phone-input" />
+              -
+              <input type="text" className="phone-input" />
+            </div>
+            <CheckBox
+              name="SMS 수신여부"
+              type="checkbox"
+              consent="동의함"
+              text="쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다."
+            />
+            <InputBox
+              title="이메일"
+              type="text"
+              name="email"
+              onChange={this.handleJoinInput}
+            />
+            <CheckBox
+              name="이메일 수신여부"
+              type="checkbox"
+              consent="동의함"
+              text="쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다."
+            />
           </div>
-          <div className="item">
-            휴대전화<span className="required">*</span>
+          <div className="joinMain">
+            <button className="goMain1" onClick={this.handleJoin}>
+              회원가입
+            </button>
+            <button className="goMain2">회원가입 취소</button>
           </div>
-          <div className="item">
-            <select className="phone-select">
-              <option value="010">010</option>
-              <option value="011">011</option>
-              <option value="016">016</option>
-              <option value="017">017</option>
-              <option value="018">018</option>
-              <option value="019">019</option>
-            </select>
-            -
-            <input type="text" className="phone-input" />
-            -
-            <input type="text" className="phone-input" />
-          </div>
-          <CheckBox
-            name="SMS 수신여부"
-            type="checkbox"
-            consent="동의함"
-            text="쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다."
-          />
-          <InputBox
-            title="이메일"
-            type="text"
-            name="email"
-            onChange={this.handleJoinInput}
-          />
-          <CheckBox
-            name="이메일 수신여부"
-            type="checkbox"
-            consent="동의함"
-            text="쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다."
-          />
         </div>
-        <div className="joinMain">
-          <button className="goMain1" onClick={this.handleJoin}>
-            회원가입
-          </button>
-          <button className="goMain2">회원가입 취소</button>
-        </div>
-      </div>
+        <Footer />
+      </>
     );
   }
 }
