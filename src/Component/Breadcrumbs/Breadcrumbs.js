@@ -9,7 +9,7 @@ class Breadcrumbs extends React.Component {
       <ul className="breadcrumbs">
         <li>
           <i className="fas fa-home"></i>
-          <Link to="/">HOME</Link>
+          <Link to="/"> HOME</Link>
         </li>
         {paths?.map(path => (
           <li key={path.no}>

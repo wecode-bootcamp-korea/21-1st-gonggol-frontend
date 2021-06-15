@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../../Component/Header/Header';
+import Footer from '../../Component/Footer/Footer';
 import CategoryHeader from './CategoryHeader/CategoryHeader';
 import SubCategory from './SubCategory/SubCategory';
 import ProductList from './ProductList/ProductList';
@@ -8,17 +9,41 @@ import './Category.scss';
 class Category extends React.Component {
   constructor() {
     super();
-
     this.state = {
-      categoryId: 1,
-      sortBy: '',
+      info: {},
       products: [],
+      currentSubCategoryId: '',
+      currentPage: 1,
+      currentSortBy: '',
     };
+
+    this.LIMIT = 8; // 한 페이지 당 상품 갯수
   }
 
   componentDidMount() {
+    // 백팩을 눌렀을 경우 Mock데이터로 작업 중
+    // 추후 Header 에서 하위 카테고리 선택할 경우 query string 형태로 받을 예정 입니다.
+    // ex) /category/2?sub=6
+    // let search = JSON.parse(
+    //   '{"' +
+    //     decodeURI(this.props.location.search.slice(1))
+    //       .replace(/"/g, '\\"')
+    //       .replace(/&/g, '","')
+    //       .replace(/=/g, '":"') +
+    //     '"}'
+    // );
+    //fetch(`${GET_CATEGORY_API}?categoryId=${this.props.match.params.main}&subcategoryId=${search.sub}`)
+    fetch(`/data/CategoryData.json`)
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          info: data.result,
+          //  currentSubCategoryId: search.sub
+        });
+      });
+
+    //fetch(`${GET_PRODUCTS_API}?categoryId=${this.state.category_no}&subcategoryid=${this.state.currentSubCategoryId}`)
     fetch('/data/ProductData.json')
-      // fetch('http://10.58.6.178:8000/products?category=BAG')
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -27,147 +52,136 @@ class Category extends React.Component {
       });
   }
 
-  onSelectProductList = () => {
+  onCallProductsApi = () => {
+    const { currentSubCategoryId, currentSortBy } = this.state;
+
     fetch('/data/ProductData.json')
+      // fetch(
+      //   `${GET_PRODUCTS_API}?categoryId=${this.state.info.category_no}&subcategoryid=${currentSubCategoryId}&sort-method=${currentSortBy}`
+      // )
       .then(res => res.json())
       .then(data => {
         this.setState({
-          products: [...this.state.products, ...data.products],
+          products: data.product_list,
+          currentPage: 1,
         });
       });
+
+    // TODO: 스크롤 이벤트 추가
   };
 
-  onChangeSubCategory = id => {
-    this.setState({ categoryId: id });
+  // Sub 카테고리 선택 Event
+  onChangeSubCategory = currentSubCategoryId => {
+    this.setState(
+      {
+        currentSubCategoryId,
+      },
+      function () {
+        this.onCallProductsApi();
+      }
+    );
+  };
+
+  // 상품정렬 선택 Event
+  onChangeFilter = e => {
+    this.setState(
+      {
+        sortBy: e.target.value,
+      },
+      function () {
+        this.onCallProductsApi();
+      }
+    );
+  };
+
+  // 페이지 변경 Event
+  onChangeCurrentPage = currentPage => {
+    const totalPage = parseInt(this.state.products.length / this.LIMIT) + 1;
+
+    if (currentPage <= 0) currentPage = 1;
+    if (currentPage >= totalPage) currentPage = totalPage;
+
+    this.setState({ currentPage });
   };
 
   render() {
-    const { categoryName, categoryPath, subCategories, bannerImage } =
-      CATEGORY[this.state.categoryId];
+    const totalPageNum = parseInt(this.state.products.length / this.LIMIT) + 1;
+
+    // 페이지 리스트 Make
+    let pageList = [];
+    for (let i = 1; i <= totalPageNum; i++) {
+      pageList.push(i);
+    }
+
+    // 페이징용 Products List
+    const pagingProducts = this.state.products.slice(
+      (this.state.currentPage - 1) * this.LIMIT,
+      this.state.currentPage * this.LIMIT
+    );
 
     return (
-      <div className="category">
-        <CategoryHeader
-          categoryId={this.state.categoryId}
-          categoryName={categoryName}
-          categoryPath={categoryPath}
-          bannerImage={bannerImage}
-          itemCount={this.state.products?.length}
-        />
-        <SubCategory
-          subCategories={subCategories}
-          currentCategory={this.state.categoryId}
-          sortBy={this.state.sortBy}
-          onChangeSubCategory={this.onChangeSubCategory}
-        />
-        <ProductList products={this.state.products} />
-        {this.state.isMoreProducts && (
-          <button
-            className="button moreContent"
-            onClick={this.onSelectProductList}
-          >
-            더보기
-          </button>
-        )}
-      </div>
+      <>
+        <Header />
+        <div className="category">
+          <CategoryHeader
+            categoryId={this.state.info.category_no}
+            categoryName={this.state.info.category_name}
+            categoryPath={this.state.info.category_path}
+            bannerImage={this.state.info.banner_image}
+            itemCount={this.state.products?.length}
+          />
+
+          <SubCategory
+            subCategories={this.state.info.sub_categories}
+            currentCategory={this.state.currentSubCategoryId}
+            sortBy={this.state.currentSortBy}
+            onChangeSubCategory={this.onChangeSubCategory}
+            onChangeFilter={this.onChangeFilter}
+          />
+
+          <ProductList products={pagingProducts} />
+
+          {/* paging 부분 컴포넌트 분리 안하겠습니다.. */}
+          <div className="pagingnation">
+            <i
+              className="fas fa-angle-double-left"
+              onClick={() => this.onChangeCurrentPage(1)}
+            ></i>
+            <i
+              className="fas fa-angle-left"
+              onClick={() =>
+                this.onChangeCurrentPage(this.state.currentPage - 1)
+              }
+            ></i>
+            {pageList.map(page => {
+              return (
+                <div
+                  key={page}
+                  className={`pagingNum${
+                    this.state.currentPage === page ? ' current' : ''
+                  }`}
+                  onClick={() => this.onChangeCurrentPage(page)}
+                >
+                  {page}
+                </div>
+              );
+            })}
+            <i
+              className="fas fa-angle-right"
+              onClick={() =>
+                this.onChangeCurrentPage(this.state.currentPage + 1)
+              }
+            ></i>
+            <i
+              className="fas fa-angle-double-right"
+              onClick={() => this.onChangeCurrentPage(totalPageNum)}
+            ></i>
+          </div>
+        </div>
+        <Footer />
+      </>
     );
   }
 }
 
-//카테고리 정보를 API 조회가 가능하면 추후 변경 예정입니다.
-const CATEGORY = {
-  1: {
-    categoryName: 'HEADWARE',
-    isMainCategory: true,
-    bannerImage: '/images/shop1_12_top.jpeg',
-    categoryPath: [{ name: 'HEADWEAR', no: 2, url: '/category/1' }],
-    subCategories: [
-      { categoryName: '야구모자', categoryNo: 11 },
-      { categoryName: '헌팅캡', categoryNo: 12 },
-      { categoryName: '버킷햇', categoryNo: 13 },
-      { categoryName: '베레', categoryNo: 14 },
-      { categoryName: 'ETC', categoryNo: 15 },
-    ],
-  },
-
-  11: {
-    categoryName: 'HEADWARE',
-    bannerImage: '/images/shop1_12_top.jpeg',
-    categoryPath: [
-      { name: 'HEADWEAR', no: 1, url: '/category/1' },
-      { name: '야구모자', no: 11, url: '/category/11' },
-    ],
-    subCategories: [
-      { categoryName: '야구모자', categoryNo: 11 },
-      { categoryName: '헌팅캡', categoryNo: 12 },
-      { categoryName: '버킷햇', categoryNo: 13 },
-      { categoryName: '베레', categoryNo: 14 },
-      { categoryName: 'ETC', categoryNo: 15 },
-    ],
-  },
-
-  12: {
-    categoryName: 'HEADWARE',
-    bannerImage: '/images/shop1_12_top.jpeg',
-    categoryPath: [
-      { name: 'HEADWEAR', no: 1, url: '/category/1' },
-      { name: '헌팅캡', no: 12, url: '/category/12' },
-    ],
-    subCategories: [
-      { categoryName: '야구모자', categoryNo: 11 },
-      { categoryName: '헌팅캡', categoryNo: 12 },
-      { categoryName: '버킷햇', categoryNo: 13 },
-      { categoryName: '베레', categoryNo: 14 },
-      { categoryName: 'ETC', categoryNo: 15 },
-    ],
-  },
-
-  13: {
-    categoryName: 'HEADWARE',
-    bannerImage: '/images/shop1_12_top.jpeg',
-    categoryPath: [
-      { name: 'HEADWEAR', no: 1, url: '/category/1' },
-      { name: '버킷햇', no: 13, url: '/category/13' },
-    ],
-    subCategories: [
-      { categoryName: '야구모자', categoryNo: 11 },
-      { categoryName: '헌팅캡', categoryNo: 12 },
-      { categoryName: '버킷햇', categoryNo: 13 },
-      { categoryName: '베레', categoryNo: 14 },
-      { categoryName: 'ETC', categoryNo: 15 },
-    ],
-  },
-
-  14: {
-    categoryName: 'HEADWARE',
-    bannerImage: '/images/shop1_12_top.jpeg',
-    categoryPath: [
-      { name: 'HEADWEAR', no: 1, url: '/category/1' },
-      { name: '베레', no: 14, url: '/category/14' },
-    ],
-    subCategories: [
-      { categoryName: '야구모자', categoryNo: 11 },
-      { categoryName: '헌팅캡', categoryNo: 12 },
-      { categoryName: '버킷햇', categoryNo: 13 },
-      { categoryName: '베레', categoryNo: 14 },
-      { categoryName: 'ETC', categoryNo: 15 },
-    ],
-  },
-
-  15: {
-    categoryName: 'HEADWARE',
-    bannerImage: '/images/shop1_12_top.jpeg',
-    categoryPath: [
-      { name: 'HEADWEAR', no: 1, url: '/category/1' },
-      { name: 'ETC', no: 15, url: '/category/15' },
-    ],
-    subCategories: [
-      { categoryName: '야구모자', categoryNo: 11 },
-      { categoryName: '헌팅캡', categoryNo: 12 },
-      { categoryName: '버킷햇', categoryNo: 13 },
-      { categoryName: '베레', categoryNo: 14 },
-      { categoryName: 'ETC', categoryNo: 15 },
-    ],
-  },
-};
 export default Category;

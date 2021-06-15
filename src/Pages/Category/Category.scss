@@ -2,23 +2,27 @@
 
 .category {
   @include flexSet($flexDirection: column);
-  padding-top: 50px;
+  padding: 50px 0;
 
-  .button {
-    width: 120px;
-    height: 30px;
-    background-color: transparent;
-    border: 1px solid #eee;
-    cursor: pointer;
-  }
+  .pagingnation {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 30px;
 
-  .button:hover {
-    background-color: #0a4d8b;
-    color: #fff;
-    transition: background-color 0.5s;
-  }
+    .fas {
+      align-self: center;
+      padding: 0 6px;
+    }
 
-  .moreContent {
-    margin: 20px;
+    .pagingNum {
+      align-self: center;
+      padding: 5px 10px 0px 10px;
+      cursor: pointer;
+
+      &.current {
+        font-weight: bold;
+      }
+    }
   }
 }

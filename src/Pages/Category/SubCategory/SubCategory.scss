@@ -16,19 +16,20 @@
       display: inline-block;
       margin: 0 2px 4px;
 
-      a {
+      .title {
         display: block;
         padding: 0 20px;
-        min-width: 120px;
         height: 32px;
+        min-width: 120px;
+        background: #fff;
+        border: 2px solid #fff;
         font-size: 14px;
         line-height: 28px;
         text-decoration: none;
         text-align: center;
-        background: #fff;
-        border: 2px solid #fff;
         text-transform: uppercase;
         color: #000;
+        cursor: pointer;
 
         &:hover,
         &.selected {
@@ -46,6 +47,13 @@
 
     select {
       width: 120px;
+      height: 24px;
+      padding: 0 10px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #343434;
+      border: 1px solid #d5d5d5;
+      vertical-align: middle;
     }
   }
 }

@@ -5,7 +5,7 @@ class ContentTitle extends React.Component {
   render() {
     const { children } = this.props;
     return (
-      <div className="ContentTitle">
+      <div className="contentTitle">
         <h1>
           <span>{children}</span>
         </h1>
