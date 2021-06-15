@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import Header from '../../Component/Header/Header';
+import Header from '../../Component/Header/Header';
 import Slider from './Slider/Slider';
 import NewItem from './NewItem';
 import BestItem from './BestItem';
-// import Footer from '../../Component/Footer/Footer';
+import Footer from '../../Component/Footer/Footer';
 import './Main.scss';
 
 class Main extends React.Component {
@@ -31,7 +31,7 @@ class Main extends React.Component {
     const { newItemList, bestItemList } = this.state;
     return (
       <>
-        {/* <Header /> */}
+        <Header />
         <div className="sliderContainer">
           <Slider />
         </div>
@@ -105,7 +105,7 @@ class Main extends React.Component {
             </li>
           </ul>
         </div>
-        {/* <Footer /> */}
+        <Footer />
       </>
     );
   }
