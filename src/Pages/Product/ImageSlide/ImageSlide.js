@@ -7,6 +7,10 @@ class ImageSlide extends React.Component {
     this.state = {
       imageCurrentNo: 0,
     };
+
+    // 슬라이드 이미지 크기 고정
+    this.WIDTH = 550;
+    this.HEIGHT = 550;
   }
 
   onChangeImage = index => {
@@ -19,7 +23,7 @@ class ImageSlide extends React.Component {
   render() {
     const { images } = this.props;
     return (
-      <div className="imageSlide">
+      <div className="imageSlide" style={{ width: `${this.WIDTH}px` }}>
         <div className="navBox">
           <span>{this.state.imageCurrentNo + 1}</span>
           <span>/</span>
@@ -30,13 +34,17 @@ class ImageSlide extends React.Component {
             className="slideList"
             style={{
               transform: `translate3d(
-                ${this.state.imageCurrentNo * -500}px, 0px, 0px`,
+                ${this.state.imageCurrentNo * -this.WIDTH}px, 0px, 0px`,
             }}
           >
             {images?.map((image, no) => (
-              <div className="slideContent" key={no}>
+              <div
+                className="slideContent"
+                key={no}
+                style={{ width: `${this.WIDTH}px`, height: `${this.HEIGHT}px` }}
+              >
                 <picture>
-                  <img src={image} />
+                  <img alt="상품 이미지" src={image} />
                 </picture>
               </div>
             ))}
@@ -44,15 +52,17 @@ class ImageSlide extends React.Component {
 
           <div
             className="buttonPrev"
+            style={{ top: `${this.height / 2 + 25}px` }}
             onClick={() => this.onChangeImage(this.state.imageCurrentNo - 1)}
           >
-            <i class="fas fa-chevron-left"></i>
+            <i className="fas fa-chevron-left"></i>
           </div>
           <div
             className="buttonNext"
+            style={{ top: `${this.height / 2 + 25}px` }}
             onClick={() => this.onChangeImage(this.state.imageCurrentNo + 1)}
           >
-            <i class="fas fa-chevron-right"></i>
+            <i className="fas fa-chevron-right"></i>
           </div>
         </div>
         <div className="paginationBox">
@@ -64,7 +74,7 @@ class ImageSlide extends React.Component {
               }}
             >
               <picture>
-                <img src={image} />
+                <img alt="상품 이미지 섬네일" src={image} />
               </picture>
             </div>
           ))}
