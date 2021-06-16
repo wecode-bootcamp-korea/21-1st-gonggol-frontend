@@ -20,6 +20,7 @@ class Product extends React.Component {
 
   componentDidMount() {
     fetch('/data/ProductInfoData.json')
+      //fetch(`http://10.58.6.61:8000/product/${this.props.match.params.id}`)
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -109,7 +110,7 @@ class Product extends React.Component {
       product_mat,
       product_size,
       product_image,
-      produrct_body,
+      product_body,
     } = this.state.productInfo;
     const { selectedProducts, selectedTabItemNo, isLike } = this.state;
 
@@ -252,7 +253,7 @@ class Product extends React.Component {
                       }`}
                       onClick={() => this.onSelectTabItemNo(no)}
                     >
-                      제품정보
+                      {item}
                     </li>
                   );
                 })}
@@ -272,7 +273,8 @@ class Product extends React.Component {
 
                 <img
                   alt={`${product_name}의 상품 상세 소개 이미지입니다.`}
-                  src={produrct_body}
+                  src={product_body}
+                  className="itemDetailImg"
                 />
               </div>
 

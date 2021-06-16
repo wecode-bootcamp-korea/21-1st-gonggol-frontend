@@ -191,6 +191,11 @@
     img {
       width: 100%;
 
+      &.itemDetailImg {
+        max-width: 750px;
+        align-self: center;
+      }
+
       &.desc {
         width: 700px;
       }
