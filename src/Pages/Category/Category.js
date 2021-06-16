@@ -17,6 +17,7 @@ class Category extends React.Component {
       currentSortBy: '',
       totalCounts: 0,
       pageCount: 12,
+      reloadProductList: false,
     };
   }
 
@@ -75,6 +76,7 @@ class Category extends React.Component {
           currentPage: reloadPage ? 1 : this.state.currentPage,
           totalCounts: data.total_counts,
           pageCount: data.page_count,
+          reloadProductList: true,
         });
       });
     // TODO: 스크롤 이벤트 추가
@@ -154,7 +156,10 @@ class Category extends React.Component {
             onChangeFilter={this.onChangeFilter}
           />
 
-          <ProductList products={this.state.products} />
+          <ProductList
+            products={this.state.products}
+            reloadProductList={this.state.reloadProductList}
+          />
 
           {/* paging 부분 컴포넌트 분리 안하겠습니다.. */}
           <div className="pagingnation">
