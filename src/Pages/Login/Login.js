@@ -1,7 +1,7 @@
-import { getByDisplayValue } from '@testing-library/dom';
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
+import { renderIntoDocument } from 'react-dom/test-utils';
 import { Link } from 'react-router-dom';
-import { INPUTS } from 'react-router-dom';
 import InputBox from './InputBox/InputBox';
 import './Login.scss';
 
@@ -55,6 +55,8 @@ class Login extends Component {
         if (data.message === 'SUCCESE!') {
           // 토큰을 로컬스토리에 저장
           // 메인으로 이동
+          alert('로그인에 성공했습니다.');
+          this.props.history.push('/');
         } else {
           // 로그인 안된 경우 에러메세지 표시!
           alert(data.message);
@@ -67,7 +69,7 @@ class Login extends Component {
       <div className="login">
         <div className="loginInner">
           <div className="backBut">
-            <Link to="" className="back">
+            <Link to="/main" className="back">
               뒤로가기
             </Link>
           </div>
@@ -76,35 +78,19 @@ class Login extends Component {
           </div>
           <div className="container">
             <div className="tittle">로그인</div>
-            <div className="loginInput">
-              {INPUTS.map((ele, idx) => {
-                return (
-                  <InputBox
-                    key={idx}
-                    type={ele.type}
-                    name={ele.name}
-                    placeholder={ele.placeholder}
-                    value={ele.value}
-                    onChange={ele.onChange}
-                  />
-                  );
-                })}
-              <InputBox
-                type="text"
-                name="loginId"
-                placeholder="아이디"
-                value={this.state.loginId}
-                onChange={this.handleloginInput}
-              />
-              <input
-                type="password"
-                name="loginPw"
-                className="psIuput"
-                placeholder="비밀번호"
-                value={this.state.loginPw}
-                onChange={this.handleloginIput}
-              />
-            </div>
+            {INPUTS.map((ele, idx) => {
+              return (
+                <InputBox
+                  key={idx}
+                  type={ele.type}
+                  name={ele.name}
+                  className={ele.className}
+                  placeholder={ele.placeholder}
+                  value={this.state[ele.name]}
+                  onChange={this.handleloginInput}
+                />
+              );
+            })}
             <div>
               <button className="button" onClick={this.handleLogin}>
                 기존 회원 로그인
@@ -112,7 +98,7 @@ class Login extends Component {
             </div>
             <div className="link">
               <div>
-                <Link to="" className="memberJoin">
+                <Link to="/join" className="memberJoin">
                   가입하기
                 </Link>
               </div>
@@ -127,18 +113,16 @@ class Login extends Component {
 const INPUTS = [
   {
     type: 'text',
+    className: 'idIuput',
     name: 'loginId',
     placeholder: '아이디',
-    value: '{this.state.loginId}',
-    onChange: '{this.handleloginInput}',
   },
   {
     type: 'password',
-    name: 'loginPw'
-    placeholder: '비밀번호'
-    value: '{this.state.loginPw}'
-    onChange:'{this.handleloginIput}'
-  }
+    className: 'psInput',
+    name: 'loginPw',
+    placeholder: '비밀번호',
+  },
 ];
 
-export default Login;
+export default withRouter(Login);
