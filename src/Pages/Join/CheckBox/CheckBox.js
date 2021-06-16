@@ -2,16 +2,18 @@ import React from 'react';
 
 class CheckBox extends React.Component {
   render() {
+    const { title, type, name, consent, text, checked, onChange, onClick } =
+      this.props;
     return (
       <>
         <label className="item">
-          {this.props.name}
+          {title}
           <span className="required">*</span>
         </label>
         <div className="item">
-          <input type={this.props.type} />
-          {<span>{this.props.consent}</span>}
-          {<p>{this.props.text}</p>}
+          <input type={type} name={name} checked={checked} onClick={onClick} />
+          <span>{consent}</span>
+          <p>{text}</p>
         </div>
       </>
     );
