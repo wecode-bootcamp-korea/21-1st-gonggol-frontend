@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 import './ProductList.scss';
 
 class ProductList extends React.Component {
+  constructor() {
+    super();
+  }
+  componentDidUpdate() {
+    //TODO: 상품 목록 업데이트 될 때마다 애니메이션 추가
+    // document.querySelector('productList').className =
+    //('fading 2s infinite');
+  }
+
   render() {
     const { products } = this.props;
     return (
@@ -27,13 +36,13 @@ class ProductList extends React.Component {
             </Link>
             <div className="description">
               <div className="icon">
-                {product.product_tag && product.product_tag[0].new && (
+                {product.product_tag.isArray && product.product_tag[0].new && (
                   <span className="new">신상품</span>
                 )}
                 {product.discount_rate < 1 && (
                   <span className="sale">세일</span>
                 )}
-                {product.product_tag && product.product_tag[0].best && (
+                {product.product_tag.isArray && product.product_tag[0].best && (
                   <span className="best">베스트</span>
                 )}
               </div>

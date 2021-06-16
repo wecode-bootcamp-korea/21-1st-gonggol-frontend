@@ -15,24 +15,16 @@ class Category extends React.Component {
       currentSubCategoryId: '',
       currentPage: 1,
       currentSortBy: '',
+      totalCounts: 0,
+      pageCount: 12,
     };
-
-    this.LIMIT = 8; // 한 페이지 당 상품 갯수
   }
 
   componentDidMount() {
     // 백팩을 눌렀을 경우 Mock데이터로 작업 중
     // 추후 Header 에서 하위 카테고리 선택할 경우 query string 형태로 받을 예정 입니다.
-    // ex) /category/2?sub=6
-    // let search = JSON.parse(
-    //   '{"' +
-    //     decodeURI(this.props.location.search.slice(1))
-    //       .replace(/"/g, '\\"')
-    //       .replace(/&/g, '","')
-    //       .replace(/=/g, '":"') +
-    //     '"}'
-    // );
-    //fetch(`${GET_CATEGORY_API}?categoryId=${this.props.match.params.main}&subcategoryId=${search.sub}`)
+    // ex) /category/2?subcategoryId=6
+
     fetch(`/data/CategoryData.json`)
       .then(res => res.json())
       .then(data => {
@@ -42,31 +34,49 @@ class Category extends React.Component {
         });
       });
 
+    let url = `http://10.58.3.42:8000/product`;
+    if (this.props.location.search) url += `${this.props.location.search}`;
+    else url += `?categoryId=${this.props.match.params.main}`;
+
+    url += `&page=${this.state.currentPage}`;
+
     //fetch(`${GET_PRODUCTS_API}?categoryId=${this.state.category_no}&subcategoryid=${this.state.currentSubCategoryId}`)
-    fetch('/data/ProductData.json')
+    fetch(url)
       .then(res => res.json())
       .then(data => {
         this.setState({
-          products: data.product_list,
+          products: data.results,
+          totalCounts: data.total_counts,
+          pageCount: data.page_count,
         });
       });
   }
 
-  onCallProductsApi = () => {
+  onCallProductsApi = reloadPage => {
     const { currentSubCategoryId, currentSortBy } = this.state;
 
-    fetch('/data/ProductData.json')
-      // fetch(
-      //   `${GET_PRODUCTS_API}?categoryId=${this.state.info.category_no}&subcategoryid=${currentSubCategoryId}&sort-method=${currentSortBy}`
-      // )
+    let url = `http://10.58.3.42:8000/product`;
+
+    // Param1. 메인 or 서브카테고리
+    if (currentSubCategoryId) url += `?subcategoryId=${currentSubCategoryId}`;
+    else url += `?categoryId=${this.props.match.params.main}`;
+
+    // Param2. 정렬방식 선택한 경우 추가
+    if (currentSortBy) url += `&sort-method=${currentSortBy}`;
+
+    // Param3. Paging
+    url += `&page=${reloadPage ? 1 : this.state.currentPage}`;
+
+    fetch(url)
       .then(res => res.json())
       .then(data => {
         this.setState({
-          products: data.product_list,
-          currentPage: 1,
+          products: data.results,
+          currentPage: reloadPage ? 1 : this.state.currentPage,
+          totalCounts: data.total_counts,
+          pageCount: data.page_count,
         });
       });
-
     // TODO: 스크롤 이벤트 추가
   };
 
@@ -77,7 +87,7 @@ class Category extends React.Component {
         currentSubCategoryId,
       },
       function () {
-        this.onCallProductsApi();
+        this.onCallProductsApi(true);
       }
     );
   };
@@ -86,26 +96,31 @@ class Category extends React.Component {
   onChangeFilter = e => {
     this.setState(
       {
-        sortBy: e.target.value,
+        currentSortBy: e.target.value,
       },
       function () {
-        this.onCallProductsApi();
+        this.onCallProductsApi(true);
       }
     );
   };
 
   // 페이지 변경 Event
   onChangeCurrentPage = currentPage => {
-    const totalPage = parseInt(this.state.products.length / this.LIMIT) + 1;
+    const totalPage =
+      parseInt(this.state.totalCounts / this.state.pageCount) + 1;
 
     if (currentPage <= 0) currentPage = 1;
     if (currentPage >= totalPage) currentPage = totalPage;
 
-    this.setState({ currentPage });
+    this.setState({ currentPage }, function () {
+      this.onCallProductsApi(false);
+    });
   };
 
   render() {
-    const totalPageNum = parseInt(this.state.products.length / this.LIMIT) + 1;
+    const totalPageNum =
+      parseInt(this.state.totalCounts / this.state.pageCount) +
+      (this.state.totalCounts % this.state.pageCount === 0 ? 0 : 1);
 
     // 페이지 리스트 Make
     let pageList = [];
@@ -114,10 +129,10 @@ class Category extends React.Component {
     }
 
     // 페이징용 Products List
-    const pagingProducts = this.state.products.slice(
-      (this.state.currentPage - 1) * this.LIMIT,
-      this.state.currentPage * this.LIMIT
-    );
+    //const pagingProducts = this.state.products?.slice(
+    //  (this.state.currentPage - 1) * this.LIMIT,
+    //  this.state.currentPage * this.LIMIT
+    //);
 
     return (
       <>
@@ -128,7 +143,7 @@ class Category extends React.Component {
             categoryName={this.state.info.category_name}
             categoryPath={this.state.info.category_path}
             bannerImage={this.state.info.banner_image}
-            itemCount={this.state.products?.length}
+            itemCount={this.state.totalCounts}
           />
 
           <SubCategory
@@ -139,7 +154,7 @@ class Category extends React.Component {
             onChangeFilter={this.onChangeFilter}
           />
 
-          <ProductList products={pagingProducts} />
+          <ProductList products={this.state.products} />
 
           {/* paging 부분 컴포넌트 분리 안하겠습니다.. */}
           <div className="pagingnation">

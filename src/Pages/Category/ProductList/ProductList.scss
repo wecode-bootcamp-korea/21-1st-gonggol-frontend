@@ -1,5 +1,14 @@
 @import '../../../Styles/_variables.scss';
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .productList {
   display: grid;
   max-width: $max-width;
@@ -7,6 +16,7 @@
   row-gap: 10px;
   column-gap: 20px;
   justify-items: stretch;
+  animation: fadein 2s;
 
   .productDetail {
     display: flex;
@@ -20,6 +30,7 @@
       align-items: center;
       flex-grow: 1;
       cursor: pointer;
+      transition: all ease-in-out 2s 0s;
 
       .productImage {
         max-width: 100%;

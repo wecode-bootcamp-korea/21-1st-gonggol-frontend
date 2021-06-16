@@ -1,311 +1,72 @@
+// 20210616155413
+// http://10.58.6.61:8000/product?subcategoryId=8&sort-method=
+
 {
-  "product_list": [
+  "results": [
     {
-      "product_id": 1,
-      "product_name": "뉴투어 라지 백팩",
-      "product_price": 208000,
+      "product_id": 25,
+      "product_name": "올리버 네오 메신저백 2040 블랙",
+      "product_price": 85000,
       "discount_rate": 0.9,
       "product_image": [
-        "https://i.imgur.com/ObuETGw.png",
-        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
+        "https://kangolkorea.com/web/product/medium/202102/95a4ccf1971c74274819f008796a8f5e.jpg"
       ],
       "product_tag": [
         {
           "new": true,
-          "sale": false,
-          "best": true
-        }
-      ]
-    },
-    {
-      "product_id": 2,
-      "product_name": "플래쉬 라지 백팩",
-      "product_price": 178000,
-      "discount_rate": 1.0,
-      "product_image": [
-        "https://i.imgur.com/mHXNUCx.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
-      ],
-      "product_tag": [
-        {
-          "new": false,
           "sale": true,
           "best": true
         }
       ]
     },
     {
-      "product_id": 3,
-      "product_name": "에픽 플래치 백팩",
-      "product_price": 168000,
-      "discount_rate": 1.0,
+      "product_id": 26,
+      "product_name": "올리버 네오 메신저백 2040 에크루",
+      "product_price": 85000,
+      "discount_rate": 0.8,
       "product_image": [
-        "https://i.imgur.com/eJ4ceXQ.png",
-        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
-      ],
-      "product_tag": [
-        {
-          "new": false,
-          "sale": false,
-          "best": true
-        }
-      ]
-    },
-    {
-      "product_id": 4,
-      "product_name": "뉴투어 라지 백팩 1395 라이트베이지",
-      "product_price": 168000,
-      "discount_rate": 1.0,
-      "product_image": [
-        "https://i.imgur.com/M12PFcB.png",
-        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
-      ],
-      "product_tag": [
-        {
-          "new": false,
-          "sale": false,
-          "best": true
-        }
-      ]
-    },
-    {
-      "product_id": 5,
-      "product_name": "다이브 백팩 1396 블랙",
-      "product_price": 168000,
-      "discount_rate": 1.0,
-      "product_image": [
-        "https://i.imgur.com/AUFvdcV.png",
-        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
-      ],
-      "product_tag": [
-        {
-          "new": false,
-          "sale": false,
-          "best": true
-        }
-      ]
-    },
-    {
-      "product_id": 6,
-      "product_name": "에픽 플래치 백팩",
-      "product_price": 168000,
-      "discount_rate": 1.0,
-      "product_image": [
-        "https://i.imgur.com/exmryXF.png",
-        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
-      ],
-      "product_tag": [
-        {
-          "new": false,
-          "sale": false,
-          "best": true
-        }
-      ]
-    },
-    {
-      "product_id": 7,
-      "product_name": "에픽 플래치 백팩",
-      "product_price": 168000,
-      "discount_rate": 1.0,
-      "product_image": [
-        "https://i.imgur.com/yAoc5Ae.png",
-        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
-      ],
-      "product_tag": [
-        {
-          "new": false,
-          "sale": false,
-          "best": true
-        }
-      ]
-    },
-
-    {
-      "product_id": 8,
-      "product_name": "뉴투어 라지 백팩",
-      "product_price": 208000,
-      "discount_rate": 1.0,
-      "product_image": [
-        "https://i.imgur.com/ObuETGw.png",
-        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
-      ],
-      "product_tag": [
-        {
-          "new": true,
-          "sale": false,
-          "best": true
-        }
-      ]
-    },
-    {
-      "product_id": 9,
-      "product_name": "플래쉬 라지 백팩",
-      "product_price": 178000,
-      "discount_rate": 1.0,
-      "product_image": [
-        "https://i.imgur.com/mHXNUCx.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
+        "https://kangolkorea.com/web/product/tiny/202102/013e605a9a96bc785e709d0963639ee7.jpg"
       ],
       "product_tag": [
         {
           "new": false,
           "sale": true,
-          "best": true
+          "best": false
         }
       ]
     },
     {
-      "product_id": 10,
-      "product_name": "에픽 플래치 백팩",
-      "product_price": 168000,
-      "discount_rate": 1.0,
+      "product_id": 27,
+      "product_name": "원티드 메신저백 2024 블랙",
+      "product_price": 108000,
+      "discount_rate": 0.7,
       "product_image": [
-        "https://i.imgur.com/eJ4ceXQ.png",
-        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
+        "https://kangolkorea.com/web/product/tiny/20200102/134995e9e31ac816619a872d3f720a43.jpg"
       ],
       "product_tag": [
         {
-          "new": false,
-          "sale": false,
-          "best": true
+          "new": true,
+          "sale": true,
+          "best": false
         }
       ]
     },
     {
-      "product_id": 11,
-      "product_name": "에픽 플래치 백팩",
-      "product_price": 168000,
-      "discount_rate": 1.0,
+      "product_id": 28,
+      "product_name": "에픽Ⅱ 메신저백 2020 블랙",
+      "product_price": 108000,
+      "discount_rate": 0.8,
       "product_image": [
-        "https://i.imgur.com/M12PFcB.png",
-        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
+        "https://kangolkorea.com/web/product/tiny/201907/0c8c8e09489d287a9aa7b8db9657acad.jpg"
       ],
       "product_tag": [
         {
           "new": false,
-          "sale": false,
-          "best": true
-        }
-      ]
-    },
-    {
-      "product_id": 12,
-      "product_name": "에픽 플래치 백팩",
-      "product_price": 168000,
-      "discount_rate": 1.0,
-      "product_image": [
-        "https://i.imgur.com/AUFvdcV.png",
-        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
-      ],
-      "product_tag": [
-        {
-          "new": false,
-          "sale": false,
-          "best": true
-        }
-      ]
-    },
-    {
-      "product_id": 13,
-      "product_name": "에픽 플래치 백팩",
-      "product_price": 168000,
-      "discount_rate": 1.0,
-      "product_image": [
-        "https://i.imgur.com/exmryXF.png",
-        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
-      ],
-      "product_tag": [
-        {
-          "new": false,
-          "sale": false,
-          "best": true
-        }
-      ]
-    },
-    {
-      "product_id": 14,
-      "product_name": "에픽 플래치 백팩",
-      "product_price": 168000,
-      "discount_rate": 1.0,
-      "product_image": [
-        "https://i.imgur.com/yAoc5Ae.png",
-        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
-      ],
-      "product_tag": [
-        {
-          "new": false,
-          "sale": false,
-          "best": true
-        }
-      ]
-    },
-    {
-      "product_id": 15,
-      "product_name": "에픽 플래치 백팩",
-      "product_price": 168000,
-      "discount_rate": 1.0,
-      "product_image": [
-        "https://i.imgur.com/AUFvdcV.png",
-        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
-      ],
-      "product_tag": [
-        {
-          "new": false,
-          "sale": false,
-          "best": true
-        }
-      ]
-    },
-    {
-      "product_id": 16,
-      "product_name": "에픽 플래치 백팩",
-      "product_price": 168000,
-      "discount_rate": 1.0,
-      "product_image": [
-        "https://i.imgur.com/AUFvdcV.png",
-        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
-      ],
-      "product_tag": [
-        {
-          "new": false,
-          "sale": false,
-          "best": true
-        }
-      ]
-    },
-    {
-      "product_id": 17,
-      "product_name": "에픽 플래치 백팩",
-      "product_price": 168000,
-      "discount_rate": 1.0,
-      "product_image": [
-        "https://i.imgur.com/AUFvdcV.png",
-        "//www.kangolkorea.com/web/product/tiny/202012/b241fa481b4d2658f696dce211e65f08.jpg",
-        "//www.kangolkorea.com/web/product/tiny/202012/8c40edd5ab7b701fa8a2b4b3c44b3085.jpg"
-      ],
-      "product_tag": [
-        {
-          "new": false,
-          "sale": false,
+          "sale": true,
           "best": true
         }
       ]
     }
-  ]
+  ],
+  "total_counts": 4
 }
