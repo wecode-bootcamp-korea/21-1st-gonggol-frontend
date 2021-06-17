@@ -42,6 +42,7 @@ class Category extends React.Component {
     url += `&page=${this.state.currentPage}`;
 
     //fetch(`${GET_PRODUCTS_API}?categoryId=${this.state.category_no}&subcategoryid=${this.state.currentSubCategoryId}`)
+    //fetch(`/data/ProductData.json`)
     fetch(url)
       .then(res => res.json())
       .then(data => {
@@ -68,6 +69,7 @@ class Category extends React.Component {
     // Param3. Paging
     url += `&page=${reloadPage ? 1 : this.state.currentPage}`;
 
+    //fetch(`/data/ProductData.json`)
     fetch(url)
       .then(res => res.json())
       .then(data => {
