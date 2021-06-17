@@ -1,4 +1,8 @@
 @import '../../Styles/variables.scss';
+.sliderContainer {
+  overflow: hidden;
+}
+
 .mainContainer {
   position: relative;
   .mainWrapper {
@@ -22,10 +26,6 @@
         background-color: rgba(39, 39, 39, 0.308);
       }
     }
-  }
-
-  .sliderContainer {
-    overflow: hidden;
   }
 
   .contentTitle {

@@ -16,7 +16,7 @@ class Main extends React.Component {
       sliderList: [],
       transLocation: -1370,
       transEffect: '',
-      scrollTop: 0,
+      scrolling: 100,
     };
   }
 
@@ -46,7 +46,6 @@ class Main extends React.Component {
   };
 
   nextBtn = () => {
-    console.log(this.state.transLocation);
     if (this.state.transLocation > -4110) {
       this.setState({
         transLocation: this.state.transLocation - 1370,
@@ -56,8 +55,6 @@ class Main extends React.Component {
   };
 
   prevBtn = () => {
-    console.log(this.state.transLocation);
-
     if (this.state.transLocation < 0) {
       this.setState({
         transLocation: this.state.transLocation + 1370,
@@ -86,12 +83,15 @@ class Main extends React.Component {
   }
 
   handleScroll = e => {
-    console.log(e.srcElement.scrollingElement.scrollTop);
-    const scrollTop = ('scroll', e.srcElement.scrollingElement.scrollTop);
+    const scrolling =
+      document.querySelector('.rightSidebar').getBoundingClientRect().top > 0
+        ? 100
+        : window.scrollY - 1000;
     this.setState({
-      scrollTop,
+      scrolling,
     });
   };
+
   render() {
     const {
       sliderList,
@@ -101,7 +101,6 @@ class Main extends React.Component {
       transEffect,
     } = this.state;
 
-    console.log(newItemList, bestItemList);
     return (
       <>
         <Header />
@@ -109,6 +108,52 @@ class Main extends React.Component {
           <Slider sliderList={sliderList} />
         </div>
         <div className="mainContainer">
+          <div
+            className="rightSidebar"
+            style={{ top: this.state?.scrolling, transition: 'top 1s' }}
+          >
+            <div className="recentlyViewed">
+              <h3>
+                <Link to="#" className="recentItemText">
+                  최근 본 상품
+                </Link>
+              </h3>
+              <div className="viewedList">
+                <ul>
+                  <li className="viewedItem">
+                    <Link to="#" className="recentImage">
+                      <img
+                        src="https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg"
+                        alt="최근본상품"
+                      />
+                    </Link>
+                  </li>
+                  <li className="viewedItem">
+                    <Link to="#" className="recentImage">
+                      <img
+                        src="https://www.kangolkorea.com/web/product/tiny/202101/fad44a3007dc9ea956814a8603df5bf5.jpg"
+                        alt="최근본상품"
+                      />
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="buttonWrapper">
+              <Link to="#" className="reviewButton">
+                REVIEW
+              </Link>
+              <Link to="#" className="questionButton">
+                Q&A
+              </Link>
+              <Link to="#" className="saleButton">
+                SALE
+              </Link>
+              <Link to="#" className="onlineButton">
+                ONLINE
+              </Link>
+            </div>
+          </div>
           <div className="mainWrapper">
             <div className="contentTitle">
               <h1>
@@ -203,52 +248,6 @@ class Main extends React.Component {
                   </a>
                 </li>
               </ul>
-            </div>
-            <div
-              className="rightSidebar"
-              style={{ top: this.state?.scrollTop, transition: 'top 1s' }}
-            >
-              <div className="recentlyViewed">
-                <h3>
-                  <Link to="#" className="recentItemText">
-                    최근 본 상품
-                  </Link>
-                </h3>
-                <div className="viewedList">
-                  <ul>
-                    <li className="viewedItem">
-                      <Link to="#" className="recentImage">
-                        <img
-                          src="https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg"
-                          alt="최근본상품"
-                        />
-                      </Link>
-                    </li>
-                    <li className="viewedItem">
-                      <Link to="#" className="recentImage">
-                        <img
-                          src="https://www.kangolkorea.com/web/product/tiny/202101/fad44a3007dc9ea956814a8603df5bf5.jpg"
-                          alt="최근본상품"
-                        />
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="buttonWrapper">
-                <Link to="#" className="reviewButton">
-                  REVIEW
-                </Link>
-                <Link to="#" className="questionButton">
-                  Q&A
-                </Link>
-                <Link to="#" className="saleButton">
-                  SALE
-                </Link>
-                <Link to="#" className="onlineButton">
-                  ONLINE
-                </Link>
-              </div>
             </div>
           </div>
         </div>
