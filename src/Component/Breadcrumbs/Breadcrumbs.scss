@@ -1,0 +1,19 @@
+.breadcrumbs {
+  display: flex;
+  align-content: center;
+
+  li {
+    line-height: 14px;
+  }
+
+  li:not(:last-child):after {
+    content: '>';
+    padding: 0 7px;
+  }
+
+  li a {
+    color: #757575;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}

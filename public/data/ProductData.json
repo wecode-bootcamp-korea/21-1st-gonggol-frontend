@@ -1,0 +1,70 @@
+{
+  "results": [
+    {
+      "product_id": 25,
+      "product_name": "올리버 네오 메신저백 2040 블랙",
+      "product_price": 85000,
+      "discount_rate": 0.9,
+      "product_image": [
+        "https://kangolkorea.com/web/product/medium/202102/95a4ccf1971c74274819f008796a8f5e.jpg"
+      ],
+      "product_tag": [
+        {
+          "new": true,
+          "sale": true,
+          "best": true
+        }
+      ]
+    },
+    {
+      "product_id": 26,
+      "product_name": "올리버 네오 메신저백 2040 에크루",
+      "product_price": 85000,
+      "discount_rate": 0.8,
+      "product_image": [
+        "https://kangolkorea.com/web/product/tiny/202102/013e605a9a96bc785e709d0963639ee7.jpg"
+      ],
+      "product_tag": [
+        {
+          "new": false,
+          "sale": true,
+          "best": false
+        }
+      ]
+    },
+    {
+      "product_id": 27,
+      "product_name": "원티드 메신저백 2024 블랙",
+      "product_price": 108000,
+      "discount_rate": 0.7,
+      "product_image": [
+        "https://kangolkorea.com/web/product/tiny/20200102/134995e9e31ac816619a872d3f720a43.jpg"
+      ],
+      "product_tag": [
+        {
+          "new": true,
+          "sale": true,
+          "best": false
+        }
+      ]
+    },
+    {
+      "product_id": 28,
+      "product_name": "에픽Ⅱ 메신저백 2020 블랙",
+      "product_price": 108000,
+      "discount_rate": 0.8,
+      "product_image": [
+        "https://kangolkorea.com/web/product/tiny/201907/0c8c8e09489d287a9aa7b8db9657acad.jpg"
+      ],
+      "product_tag": [
+        {
+          "new": false,
+          "sale": true,
+          "best": true
+        }
+      ]
+    }
+  ],
+  "total_counts": 4,
+  "page_count": 8
+}

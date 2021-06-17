@@ -1,0 +1,28 @@
+@import '../../Styles/_variables.scss';
+
+.category {
+  @include flexSet($flexDirection: column);
+  padding: 50px 0;
+
+  .pagingnation {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 30px;
+
+    .fas {
+      align-self: center;
+      padding: 0 6px;
+    }
+
+    .pagingNum {
+      align-self: center;
+      padding: 5px 10px 0px 10px;
+      cursor: pointer;
+
+      &.current {
+        font-weight: bold;
+      }
+    }
+  }
+}

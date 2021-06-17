@@ -1,0 +1,15 @@
+{
+  "result": {
+    "category_no": 2,
+    "category_name": "BAG",
+    "sub_categories": [
+      { "category_name": "백팩", "category_no": 6 },
+      { "category_name": "크로스백", "category_no": 7 },
+      { "category_name": "메신저백", "category_no": 8 },
+      { "category_name": "클러치백", "category_no": 9 },
+      { "category_name": "토드백", "category_no": 10 }
+    ],
+    "category_path": [{ "name": "BAG", "url": "/category/2", "no": 2 }],
+    "banner_image": "https://i.imgur.com/HV5jUdp.png"
+  }
+}

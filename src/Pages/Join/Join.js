@@ -18,7 +18,7 @@ class Join extends Component {
       postal: '',
       address: '',
       addressDetail: '',
-      phoneInput1: '',
+      phoneInput1: '010',
       phoneInput2: '',
       phoneInput3: '',
       email: '',

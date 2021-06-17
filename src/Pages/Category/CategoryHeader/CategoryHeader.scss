@@ -1,0 +1,16 @@
+@import '../../../Styles/_variables.scss';
+
+.categoryHeader {
+  width: 100%;
+  max-width: $max-width;
+
+  img {
+    width: 100%;
+  }
+
+  .normalMenu {
+    @include flexSet($justify: space-between);
+    padding-top: 50px;
+    font-size: 13px;
+  }
+}
