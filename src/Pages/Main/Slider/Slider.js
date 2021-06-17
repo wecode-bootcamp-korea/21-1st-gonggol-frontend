@@ -55,7 +55,7 @@ class Slider extends Component {
     this.infiniteSlider = setInterval(this.infiniteMove, 3000);
   }
 
-  componentDidClear() {
+  componentWillUnmount() {
     clearInterval(this.infiniteSlider);
   }
 
