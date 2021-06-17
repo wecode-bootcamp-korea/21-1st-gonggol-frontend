@@ -28,6 +28,10 @@
       vertical-align: middle;
     }
 
+    :focus {
+      outline: none;
+    }
+
     .item {
       padding: 1rem;
       border-right: 1px solid #e8e8e8;
@@ -94,6 +98,7 @@
       color: #f1f1f1;
       font-weight: bold;
       text-decoration: none;
+      cursor: pointer;
     }
 
     .goMain2 {
@@ -105,6 +110,7 @@
       color: #f1f1f1;
       font-weight: bold;
       text-decoration: none;
+      cursor: pointer;
     }
   }
 }

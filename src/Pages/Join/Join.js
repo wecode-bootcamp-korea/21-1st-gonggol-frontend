@@ -1,4 +1,6 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import InputBox from './InputBox/InputBox';
 import CheckBox from './CheckBox/CheckBox';
 import Header from '../../Component/Header/Header';
@@ -85,25 +87,16 @@ class Join extends Component {
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data);
-        if (data.message === 'SUCCESE') {
+        if (data.message === 'SUCCESS!') {
           alert('회원가입완료');
+          this.props.history.push('/login');
         } else {
           alert(data.message);
         }
       });
   };
 
-  handlePhone = e => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
-  };
-
   handleCheck = e => {
-    //const target = e.target;
-    //const value = target.type === 'checkbox' ? target.checked : target.value;
-    //const name = target.name;
     const { name, checked } = e.target;
     this.setState({
       [name]: checked,
@@ -111,7 +104,6 @@ class Join extends Component {
   };
 
   render() {
-    console.log(this.state.phoneInput1);
     let pwValidation =
       this.state.password.length > 0 &&
       this.state.password === this.state.pwCheck;
@@ -177,7 +169,7 @@ class Join extends Component {
                 className="phoneSelect"
                 name="phoneInput1"
                 value={this.state.phoneInput1}
-                onChange={this.handlePhone}
+                onChange={this.handleJoinInput}
               >
                 <option value="010">010</option>
                 <option value="011">011</option>
@@ -191,16 +183,18 @@ class Join extends Component {
                 type="text"
                 className="phoneInput"
                 name="phoneInput2"
+                maxlength="4"
                 value={this.state.phoneInput2}
-                onChange={this.handlePhone}
+                onChange={this.handleJoinInput}
               />
               -
               <input
                 type="text"
                 className="phoneInput"
                 name="phoneInput3"
+                maxlength="4"
                 value={this.state.phoneInput3}
-                onChange={this.handlePhone}
+                onChange={this.handleJoinInput}
               />
             </div>
 
@@ -211,7 +205,7 @@ class Join extends Component {
               consent="동의함"
               text="쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다."
               checked={this.state.checkSms}
-              onClick={this.handleCheck}
+              onChange={this.handleCheck}
             />
             <InputBox
               title="이메일"
@@ -226,7 +220,7 @@ class Join extends Component {
               consent="동의함"
               text="쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다."
               checked={this.state.checkEmail}
-              onClick={this.handleCheck}
+              onChange={this.handleCheck}
             />
           </div>
           <div className="joinMain">
@@ -237,8 +231,9 @@ class Join extends Component {
             >
               회원가입
             </button>
-
-            <button className="goMain2">회원가입 취소</button>
+            <Link to="./main">
+              <button className="goMain2">회원가입 취소</button>
+            </Link>
           </div>
         </div>
         <Footer />
@@ -273,4 +268,4 @@ const INPUTS = [
   },
 ];
 
-export default Join;
+export default withRouter(Join);
