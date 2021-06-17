@@ -1,0 +1,21 @@
+{
+  "sliderSrc": [
+    {
+      "imageNo": 0,
+      "imageSrc": "/images/main/3.png"
+    },
+    {
+      "imageNo": 1,
+      "imageSrc": "/images/main/1.png"
+    },
+    {
+      "imageNo": 2,
+      "imageSrc": "/images/main/2.png"
+    },
+    { "imageNo": 3, "imageSrc": "/images/main/4.png" },
+    {
+      "imageNo": 4,
+      "imageSrc": "/images/main/5.png"
+    }
+  ]
+}

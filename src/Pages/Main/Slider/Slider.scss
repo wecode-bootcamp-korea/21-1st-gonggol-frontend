@@ -1,0 +1,67 @@
+@import '../../../Styles/variables.scss';
+
+.imageSlider {
+  position: relative;
+  width: 700vw;
+
+  .imageContainer {
+    display: flex;
+
+    li {
+      img {
+        height: 700px;
+        width: 100vw;
+        overflow: hidden;
+      }
+    }
+  }
+
+  button {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    cursor: pointer;
+    background-color: inherit;
+
+    i {
+      color: black;
+    }
+
+    .fa-chevron-left {
+      position: absolute;
+      top: 50%;
+      left: 0.5%;
+    }
+
+    .fa-chevron-right {
+      position: absolute;
+      top: 50%;
+      left: 13.5%;
+    }
+  }
+
+  .radioContainer {
+    position: absolute;
+    bottom: 21px;
+    left: 6.8%;
+    input {
+      width: 1.2rem;
+      height: 1.2rem;
+      margin-right: 0.6rem;
+      cursor: pointer;
+    }
+
+    input[type='radio']:before {
+      content: '';
+      display: block;
+      width: 53%;
+      height: 53%;
+      margin: 22% auto;
+      border-radius: 50%;
+    }
+
+    input[type='radio']:checked:before {
+      background: rgba(24, 24, 24, 0.808);
+    }
+  }
+}
