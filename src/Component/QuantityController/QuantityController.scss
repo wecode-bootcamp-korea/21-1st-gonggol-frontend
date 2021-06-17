@@ -1,0 +1,38 @@
+.quantityController {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 60px;
+  height: 25px;
+
+  .fa-minus,
+  .fa-plus {
+    align-self: center;
+    height: 25px;
+    padding: 2px 4px;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    color: rgb(100, 99, 99);
+    line-height: 20px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .number {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .fa-minus {
+    border-left: 1px solid #ddd;
+  }
+
+  .fa-plus {
+    border-right: 1px solid #ddd;
+    text-align: right;
+  }
+}
