@@ -3,19 +3,25 @@ import { Link } from 'react-router-dom';
 
 class NewItem extends Component {
   render() {
-    const { itemSrc, itemName, itemPrice, itemNo, index } = this.props;
-    console.log(index <= 9 ? index : (index % 10) + 1);
+    const { images } = this.props;
+
     return (
-      <div className={`newInfoWrapper${index <= 9 ? index : (index % 10) + 1}`}>
-        <Link className="newInfo" to="#">
-          <img src={itemSrc} alt="newproduct1" />
-          <div className="overlayContainer" />
-          <div className="overlayText">
-            <span>{itemName}</span>
-            <strong>{itemPrice.toLocaleString()}원</strong>
-            <span className="viewDetail">more</span>
-          </div>
-        </Link>
+      <div className="newProduct">
+        {images?.map((img, index) => {
+          return (
+            <div key={index} className={`newInfoWrapper${index}`}>
+              <Link className="newInfo" to="#">
+                <img src={img.product_image} alt="newproduct1" />
+                <div className="overlayContainer" />
+                <div className="overlayText">
+                  <span>{img.product_name}</span>
+                  <strong>{img.product_price.toLocaleString()}원</strong>
+                  <span className="viewDetail">more</span>
+                </div>
+              </Link>
+            </div>
+          );
+        })}
       </div>
     );
   }

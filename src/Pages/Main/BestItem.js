@@ -5,9 +5,9 @@ class BestItem extends Component {
   render() {
     const { bestNo, bestSrc, bestName, bestPrice } = this.props;
     return (
-      <li class={`productList${bestNo}`}>
-        <div class="itemWrapper">
-          <Link className="itemInfo" to="#">
+      <li className={`productList${bestNo}`}>
+        <div className="itemWrapper">
+          <Link className="itemInfo" to={`/product/${bestNo}`}>
             <img src={bestSrc} alt="bestseller" />
             <p>{bestName}</p>
           </Link>
