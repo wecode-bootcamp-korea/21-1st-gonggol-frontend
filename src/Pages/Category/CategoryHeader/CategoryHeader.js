@@ -5,18 +5,18 @@ import './CategoryHeader.scss';
 
 class CategoryHeader extends React.Component {
   render() {
-    const { id, name, bannerImage, categoryPath, itemCount } = this.props;
-
+    const { categoryId, categoryName, categoryPath, bannerImage, itemCount } =
+      this.props;
     return (
-      <div className="CategoryHeader">
+      <div className="categoryHeader">
         <div>
-          <img alt={`${name}의 배너 이미지`} src={bannerImage} />
+          <img alt={`${categoryName}의 배너 이미지`} src={bannerImage} />
         </div>
-        <div className="normalmenu">
+        <div className="normalMenu">
           <div>TOTAL PRODUCT: {itemCount}</div>
           <Breadcrumbs paths={categoryPath} />
         </div>
-        <ContentTitle>{name}</ContentTitle>
+        <ContentTitle>{categoryName}</ContentTitle>
       </div>
     );
   }

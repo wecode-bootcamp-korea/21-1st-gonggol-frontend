@@ -1,17 +1,17 @@
-.Breadcrumbs {
-  ul {
-    display: flex;
-    align-content: center;
-  }
+.breadcrumbs {
+  display: flex;
+  align-content: center;
+
   li {
-    align-items: center;
+    line-height: 14px;
   }
-  li:after:not(:last-of-type) {
+
+  li:not(:last-child):after {
     content: '>';
+    padding: 0 7px;
   }
 
   li a {
-    padding: 0 0 0 12px;
     color: #757575;
     text-decoration: none;
     text-transform: uppercase;

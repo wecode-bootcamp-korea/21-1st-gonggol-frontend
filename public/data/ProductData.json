@@ -1,111 +1,70 @@
 {
-  "totalElements": 77,
-  "totalPages": 10,
-  "size": 8,
-  "products": [
+  "results": [
     {
-      "productId": 1,
-      "productName": "공골 옥스퍼드 셔치 777S 그레이",
-      "productImage": {
-        "main": "https://cdn.pixabay.com/photo/2016/11/29/09/41/bag-1868758_1280.jpg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
-      "discount_rate": 1,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": false,
-      "like_flag": true
-    },
-    {
-      "productId": 2,
-      "productName": "상품2입니다.",
-      "productImage": {
-        "main": "https://kangolkorea.com/web/product/tiny/202103/a28b8534139c8aa5d2959a591c0520bb.jpg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
+      "product_id": 25,
+      "product_name": "올리버 네오 메신저백 2040 블랙",
+      "product_price": 85000,
       "discount_rate": 0.9,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": true,
-      "like_flag": true
+      "product_image": [
+        "https://kangolkorea.com/web/product/medium/202102/95a4ccf1971c74274819f008796a8f5e.jpg"
+      ],
+      "product_tag": [
+        {
+          "new": true,
+          "sale": true,
+          "best": true
+        }
+      ]
     },
     {
-      "productId": 3,
-      "productName": "상품3입니다.",
-      "productImage": {
-        "main": "/images/items/item_headwear_01.jpeg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
-      "discount_rate": 1,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": false,
-      "like_flag": true
+      "product_id": 26,
+      "product_name": "올리버 네오 메신저백 2040 에크루",
+      "product_price": 85000,
+      "discount_rate": 0.8,
+      "product_image": [
+        "https://kangolkorea.com/web/product/tiny/202102/013e605a9a96bc785e709d0963639ee7.jpg"
+      ],
+      "product_tag": [
+        {
+          "new": false,
+          "sale": true,
+          "best": false
+        }
+      ]
     },
     {
-      "productId": 4,
-      "productName": "상품4입니다.",
-      "productImage": {
-        "main": "/images/items/item_headwear_01.jpeg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
-      "discount_rate": 1,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": true,
-      "like_flag": true
+      "product_id": 27,
+      "product_name": "원티드 메신저백 2024 블랙",
+      "product_price": 108000,
+      "discount_rate": 0.7,
+      "product_image": [
+        "https://kangolkorea.com/web/product/tiny/20200102/134995e9e31ac816619a872d3f720a43.jpg"
+      ],
+      "product_tag": [
+        {
+          "new": true,
+          "sale": true,
+          "best": false
+        }
+      ]
     },
     {
-      "productId": 5,
-      "productName": "상품5입니다.",
-      "productImage": {
-        "main": "/images/items/item_headwear_01.jpeg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
-      "discount_rate": 1,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": true,
-      "like_flag": true
-    },
-    {
-      "productId": 5,
-      "productName": "상품5입니다.",
-      "productImage": {
-        "main": "/images/items/item_headwear_01.jpeg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
-      "discount_rate": 1,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": true,
-      "like_flag": true
-    },
-    {
-      "productId": 5,
-      "productName": "상품5입니다.",
-      "productImage": {
-        "main": "/images/items/item_headwear_01.jpeg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
-      "discount_rate": 1,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": true,
-      "like_flag": true
-    },
-    {
-      "productId": 5,
-      "productName": "상품5입니다.",
-      "productImage": {
-        "main": "/images/items/item_headwear_01.jpeg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
-      "discount_rate": 1,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": true,
-      "like_flag": true
+      "product_id": 28,
+      "product_name": "에픽Ⅱ 메신저백 2020 블랙",
+      "product_price": 108000,
+      "discount_rate": 0.8,
+      "product_image": [
+        "https://kangolkorea.com/web/product/tiny/201907/0c8c8e09489d287a9aa7b8db9657acad.jpg"
+      ],
+      "product_tag": [
+        {
+          "new": false,
+          "sale": true,
+          "best": true
+        }
+      ]
     }
-  ]
+  ],
+  "total_counts": 4,
+  "page_count": 8
 }

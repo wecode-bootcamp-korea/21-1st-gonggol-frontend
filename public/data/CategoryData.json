@@ -1,68 +1,15 @@
 {
-  "no": 1,
-  "name": "HEADWEAR",
-  "sub_categories": [
-    { "name": "야구모자", "id": 1 },
-    { "name": "헌팅캡", "id": 2 },
-    { "name": "버킷햇", "id": 3 },
-    { "name": "베레", "id": 4 },
-    { "name": "ETC", "id": 5 }
-  ],
-  "banner_image": "/images/shop1_12_top.jpeg",
-  "category_path": [{ "name": "HEADWEAR", "url": "/category/2", "no": 2 }],
-  "products": [
-    {
-      "productId": 1,
-      "productName": "공골 옥스퍼드 셔치 777S 그레이",
-      "productImage": {
-        "main": "https://cdn.pixabay.com/photo/2016/11/29/09/41/bag-1868758_1280.jpg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
-      "discount_rate": 1,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": false,
-      "like_flag": true
-    },
-    {
-      "productId": 2,
-      "productName": "상품2입니다.",
-      "productImage": {
-        "main": "/images/items/item_headwear_01.jpeg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
-      "discount_rate": 0.9,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": true,
-      "like_flag": true
-    },
-    {
-      "productId": 3,
-      "productName": "상품3입니다.",
-      "productImage": {
-        "main": "/images/items/item_headwear_02.jpeg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
-      "discount_rate": 1,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": false,
-      "like_flag": true
-    },
-    {
-      "productId": 4,
-      "productName": "상품4입니다.",
-      "productImage": {
-        "main": "/images/items/item_headwear_01.jpeg",
-        "hover_img": "/images/items/item_headwear_01_hover.jpeg"
-      },
-      "original_price": 10000,
-      "discount_rate": 1,
-      "insert_date": "2021-06-01 12:01:22",
-      "new_flag": true,
-      "like_flag": true
-    }
-  ],
-  "isMoreProducts": true
+  "result": {
+    "category_no": 2,
+    "category_name": "BAG",
+    "sub_categories": [
+      { "category_name": "백팩", "category_no": 6 },
+      { "category_name": "크로스백", "category_no": 7 },
+      { "category_name": "메신저백", "category_no": 8 },
+      { "category_name": "클러치백", "category_no": 9 },
+      { "category_name": "토드백", "category_no": 10 }
+    ],
+    "category_path": [{ "name": "BAG", "url": "/category/2", "no": 2 }],
+    "banner_image": "https://i.imgur.com/HV5jUdp.png"
+  }
 }
