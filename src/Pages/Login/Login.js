@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { renderIntoDocument } from 'react-dom/test-utils';
 import { Link } from 'react-router-dom';
 import InputBox from './InputBox/InputBox';
 import './Login.scss';
@@ -51,9 +50,10 @@ class Login extends Component {
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data);
         if (data.message === 'SUCCESE!') {
+          console.log(data);
           // 토큰을 로컬스토리에 저장
+          localStorage.setItem('token', data.token);
           // 메인으로 이동
           alert('로그인에 성공했습니다.');
           this.props.history.push('/');

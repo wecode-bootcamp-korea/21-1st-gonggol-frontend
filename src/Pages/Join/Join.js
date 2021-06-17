@@ -9,7 +9,7 @@ class Join extends Component {
         <div className="tittle">
           <h1>기본정보</h1>
         </div>
-        <div className="Container">
+        <div className="container">
           <div className="item">
             아이디<span className="required">*</span>
           </div>
