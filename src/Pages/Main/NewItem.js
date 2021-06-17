@@ -10,7 +10,7 @@ class NewItem extends Component {
         {images?.map((img, index) => {
           return (
             <div key={index} className={`newInfoWrapper${index}`}>
-              <Link className="newInfo" to="#">
+              <Link className="newInfo" to={`/product/${img.product_id}`}>
                 <img src={img.product_image} alt="newproduct1" />
                 <div className="overlayContainer" />
                 <div className="overlayText">

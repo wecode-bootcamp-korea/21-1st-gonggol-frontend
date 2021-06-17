@@ -29,15 +29,15 @@ class Header extends React.Component {
         <div className="headerTop">
           <div className="topWrapper">
             <div className="headerLogo">
-              <Link to="#" className="logoName">
+              <Link to="/" className="logoName">
                 GONGGOL
               </Link>
             </div>
             <ul className="headerMenu">
-              {MENUS.map((string, idx) => {
+              {MENUS.map((menu, idx) => {
                 return (
                   <li key={idx} className="listContainer">
-                    <Link to="#">{string}</Link>
+                    <Link to={menu.url}>{menu.name}</Link>
                   </li>
                 );
               })}
@@ -107,7 +107,12 @@ class Header extends React.Component {
   }
 }
 
-const MENUS = ['LOGIN', 'JOIN', 'CART', 'ORDER'];
+const MENUS = [
+  { name: 'LOGIN', url: '/login' },
+  { name: 'JOIN', url: '/join' },
+  { name: 'CART', url: '/cart' },
+  { name: 'ORDER', url: '/order' },
+];
 const CATEGORIES = [
   'HEADWEAR',
   'BAG',

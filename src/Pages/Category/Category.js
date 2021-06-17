@@ -4,6 +4,7 @@ import Footer from '../../Component/Footer/Footer';
 import CategoryHeader from './CategoryHeader/CategoryHeader';
 import SubCategory from './SubCategory/SubCategory';
 import ProductList from './ProductList/ProductList';
+import { BASE_URL } from '../../config';
 import './Category.scss';
 
 class Category extends React.Component {
@@ -35,9 +36,10 @@ class Category extends React.Component {
         });
       });
 
-    let url = `http://10.58.3.42:8000/product`;
+    let url = `${BASE_URL}/product`;
     if (this.props.location.search) url += `${this.props.location.search}`;
-    else url += `?categoryId=${this.props.match.params.main}`;
+    //else url += `?categoryId=${this.props.match.params.main}`;
+    else url += `?categoryId=2`;
 
     url += `&page=${this.state.currentPage}`;
 
@@ -57,11 +59,12 @@ class Category extends React.Component {
   onCallProductsApi = reloadPage => {
     const { currentSubCategoryId, currentSortBy } = this.state;
 
-    let url = `http://10.58.3.42:8000/product`;
+    let url = `${BASE_URL}/product`;
 
     // Param1. 메인 or 서브카테고리
     if (currentSubCategoryId) url += `?subcategoryId=${currentSubCategoryId}`;
-    else url += `?categoryId=${this.props.match.params.main}`;
+    //else url += `?categoryId=${this.props.match.params.main}`;
+    else url += `?categoryId=2`;
 
     // Param2. 정렬방식 선택한 경우 추가
     if (currentSortBy) url += `&sort-method=${currentSortBy}`;

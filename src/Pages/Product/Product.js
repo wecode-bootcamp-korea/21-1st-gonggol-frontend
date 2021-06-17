@@ -4,6 +4,7 @@ import Footer from '../../Component/Footer/Footer';
 import Breadcrumbs from '../../Component/Breadcrumbs/Breadcrumbs';
 import ImageSlide from './ImageSlide/ImageSlide';
 import QuantityController from '../../Component/QuantityController/QuantityController';
+import { BASE_URL } from '../../config';
 import './Product.scss';
 
 class Product extends React.Component {
@@ -17,10 +18,9 @@ class Product extends React.Component {
       isLike: false,
     };
   }
-
   componentDidMount() {
-    fetch('/data/ProductInfoData.json')
-      //fetch(`http://10.58.6.61:8000/product/${this.props.match.params.id}`)
+    //fetch('/data/ProductInfoData.json')
+    fetch(`${BASE_URL}/product/${this.props.match.params.id}`)
       .then(res => res.json())
       .then(data => {
         this.setState({
