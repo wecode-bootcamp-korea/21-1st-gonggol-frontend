@@ -5,6 +5,7 @@ import Slider from './Slider/Slider';
 import NewItem from './NewItem';
 import BestItem from './BestItem';
 import Footer from '../../Component/Footer/Footer';
+import { BASE_URL } from '../../config';
 import './Main.scss';
 
 class Main extends React.Component {
@@ -21,7 +22,7 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://10.58.5.27:8000/main')
+    fetch(`${BASE_URL}/product/main`)
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -84,7 +85,7 @@ class Main extends React.Component {
 
   handleScroll = e => {
     const scrolling =
-      document.querySelector('.rightSidebar').getBoundingClientRect().top > 0
+      document.querySelector('.rightSidebar')?.getBoundingClientRect().top > 0
         ? 100
         : window.scrollY - 1000;
     this.setState({
@@ -121,7 +122,7 @@ class Main extends React.Component {
               <div className="viewedList">
                 <ul>
                   <li className="viewedItem">
-                    <Link to="#" className="recentImage">
+                    <Link to="/product/1" className="recentImage">
                       <img
                         src="https://kangolkorea.com/web/product/medium/202101/223f3005abb3d7be13dfa5766c48003c.jpg"
                         alt="최근본상품"
@@ -129,7 +130,7 @@ class Main extends React.Component {
                     </Link>
                   </li>
                   <li className="viewedItem">
-                    <Link to="#" className="recentImage">
+                    <Link to="/product/1" className="recentImage">
                       <img
                         src="https://www.kangolkorea.com/web/product/tiny/202101/fad44a3007dc9ea956814a8603df5bf5.jpg"
                         alt="최근본상품"

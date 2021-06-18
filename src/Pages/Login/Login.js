@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import InputBox from './InputBox/InputBox';
+import { BASE_URL } from '../../config';
 import './Login.scss';
 
 class Login extends Component {
@@ -41,8 +42,8 @@ class Login extends Component {
     }
 
     //로그인 버튼 클릭시 서버로 데이터 전송
-    fetch('http://10.58.4.15:8000/users/login', {
-      method: 'Post',
+    fetch(`${BASE_URL}/users/login`, {
+      method: 'POST',
       body: JSON.stringify({
         account: this.state.loginId,
         password: this.state.loginPw,
@@ -51,7 +52,6 @@ class Login extends Component {
       .then(res => res.json())
       .then(data => {
         if (data.message === 'SUCCESE!') {
-          console.log(data);
           // 토큰을 로컬스토리에 저장
           localStorage.setItem('token', data.token);
           // 메인으로 이동
@@ -69,7 +69,7 @@ class Login extends Component {
       <div className="login">
         <div className="loginInner">
           <div className="backBut">
-            <Link to="/main" className="back">
+            <Link to="/" className="back">
               뒤로가기
             </Link>
           </div>

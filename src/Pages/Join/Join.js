@@ -5,6 +5,7 @@ import InputBox from './InputBox/InputBox';
 import CheckBox from './CheckBox/CheckBox';
 import Header from '../../Component/Header/Header';
 import Footer from '../../Component/Footer/Footer';
+import { BASE_URL } from '../../config';
 import './Join.scss';
 
 class Join extends Component {
@@ -70,8 +71,8 @@ class Join extends Component {
     let phone =
       this.state.phoneInput1 + this.state.phoneInput2 + this.state.phoneInput3;
 
-    fetch('http://10.58.4.15:8000/users/joinin', {
-      method: 'post',
+    fetch(`${BASE_URL}/users/joinin`, {
+      method: 'POST',
       body: JSON.stringify({
         account: this.state.userId,
         password: this.state.password,
@@ -231,7 +232,7 @@ class Join extends Component {
             >
               회원가입
             </button>
-            <Link to="./main">
+            <Link to="./">
               <button className="goMain2">회원가입 취소</button>
             </Link>
           </div>
